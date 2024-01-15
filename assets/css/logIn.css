@@ -81,6 +81,7 @@
 .logIn__leftSide__form {
     gap: 44px;
     margin: auto;
+    width: 60% ;
 }
 
 .logIn__leftSide__form__upper {
