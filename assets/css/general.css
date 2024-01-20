@@ -361,15 +361,14 @@
 
 @media (max-width:991px) {
     .navBarThree {
+        display: flex !important;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1000;
     }
 
-    .home {
-        margin-top: 50px !important;
-    }
+
 
     .navbar:nth-child(1) {
         display: none !important;
@@ -392,6 +391,7 @@
     background-color: #003A61;
     padding-block: 10px;
     position: fixed;
+    display: none;
 }
 
 .navBarThree__header {

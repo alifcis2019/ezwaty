@@ -97,6 +97,12 @@ body {
     color: black;
 }
 
+@media (max-width:991px) {
+    .home {
+        margin-top: 50px !important;
+    }
+}
+
 
 /* scroll down arrows */
 .scrollDown {
