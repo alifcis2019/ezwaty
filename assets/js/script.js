@@ -15,12 +15,9 @@
 
     let accordionCloseList = document.querySelectorAll(".accordion__closed")
     for(let i =0 ; i< accordionCloseList.length;i++){
-      console.log(accordionCloseList[i]);
       accordionCloseList[i].addEventListener('click',(e)=>{
-        console.log(accordionCloseList[i]);
         // close opened accordion
         accordionListText.forEach(el=>{
-          console.log(el);
           el.parentElement.parentElement.children[0].children[1].children[0].style.display="none";
           el.parentElement.parentElement.children[0].children[1].children[1].style.display="block";
           el.style.display="none";

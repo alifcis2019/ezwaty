@@ -86,17 +86,23 @@ document.querySelector(".userNotification").addEventListener('click', (e) => {
 
 
 // navbar Tab on mobile Handle
+
+let open =false
 document.querySelector(".navbarTab").addEventListener('click', (e) => {
-    document.querySelector(".navbarThree__subMenu").style.display = "block";
-    document.querySelector(".navbarClose").style.display = "block";
-    document.querySelector(".navbarTab").style.display = "none";
+    if(!open){
+        document.querySelector(".navbarThree__subMenu").style.display = "flex"
+        open=true
+    }
+    else {
+        document.querySelector(".navbarThree__subMenu").style.display="none"
+        open = false
+    }
 }
 )
 
 document.querySelector(".navbarClose").addEventListener('click', () => {
-    document.querySelector(".navbarTab").style.display = "block";
+    open = false
     document.querySelector(".navbarThree__subMenu").style.display = "none";
-    document.querySelector(".navbarClose").style.display = "none";
 })
 
 

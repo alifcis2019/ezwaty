@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forget Password</title>
+    <title>OTP</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <!-- main style -->
     <link rel="stylesheet" href="/assets/css/general.css">
-    <link rel="stylesheet" href="/assets/css/forgetPassword.css">
+    <link rel="stylesheet" href="/assets/css/otp.css">
 </head>
 
 <body>
@@ -41,45 +41,53 @@
                 <div class="logIn__leftSide__form__upper">
                     <div class="logIn__leftSide__form__welcome d-flex flex-column" style="gap: 24px;">
                         <div>
-                            <a href="/assets/pages/logIn.html" class="backToLoginButton accordion d-flex" style="gap:10px ;">
+                            <a href="/assets/pages/signup/forgotPassword.html" class="backToLoginButton accordion d-flex" style="gap:10px ;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                                     <path d="M6.25 15L25 14.9997" stroke="#090A0A" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M11.25 8.75L5.88391 14.1161C5.46724 14.5328 5.25891 14.7411 5.25891 15C5.25891 15.2589 5.46724 15.4672 5.88391 15.8839L11.25 21.25" stroke="#090A0A" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Back to log in</a>
+                                Back</a>
                         </div>
                         <div>
                             <p>
                                 Reset your Password
                             </p>
                             <p>
-                                Enter your phone number to create new password.
+                                Enter the code sent to your phone number.
                             </p>
                         </div>
                     </div>
                     <div class="logIn__leftSide__form__data d-flex flex-column">
                         <div class="logIn__leftSide__form__data__block d-flex flex-column align-items-start">
-                            <p class="m-0">Phone Number</p>
-                            <div class="logIn__leftSide__form__data__block__input d-flex align-items-center justify-content-start" style="gap: 10px;">
-                                <img src="/assets/images/logIn/egypt.png" width="24px"
-                                height="16px" alt="">
-                                <!-- dropdown phone number -->
-                                <div class="d-flex align-items-center justify-content-between gap-1">
-                                    <p class="m-0">EG</p>
-                                    <div class="logIn__leftSide__form__data__block__input__line"></div>
-                                    <p class="m-0">+20</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                            <div class="logIn__leftSide__form__data__block__input d-flex align-items-start justify-content-center" style="gap: 16px;">
+                                <div class="codeBlock">
+                                    <input type="text" class="codeBlock__number  border-0 w-100" value="5">
                                 </div>
-                                <input type="number" class="border-0" placeholder="_ _ _ _ _ _ _ _ _">
+                                <div class="codeBlock">
+                                    <input type="text" class="codeBlock__number  border-0 w-100" value="-">
+                                </div>
+                                <div class="codeBlock">
+                                    <input type="text" class="codeBlock__number  border-0 w-100" value="-">
+                                </div>
+                                <div class="codeBlock">
+                                    <input type="text" class="codeBlock__number  border-0 w-100" value="-">
+                                </div>
+                                <div class="codeBlock">
+                                    <input type="text" class="codeBlock__number  border-0 w-100" value="-">
+                                </div>
+                                <div class="codeBlock">
+                                    <input type="text" class="codeBlock__number  border-0 w-100" value="-">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex flex-column" style="gap: 12px;">
                     <div class="logIn__leftSide__form__button">
                         <p class="m-0">Continue</p>
+                    </div>
+                    <div class="otp__resendbutton">
+                        <p class="m-0">Resend Code</p>
                     </div>
                 </div>
             </div>
@@ -114,7 +122,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- main js file -->
     <script src="/assets/js/general.js"></script>
-    <script src="/assets/js/forgetPassword.js"></script>
+    <script src="/assets/js/otp.js"></script>
 </body>
 
 </html>

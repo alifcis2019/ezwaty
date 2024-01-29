@@ -1,0 +1,594 @@
+/* start payment */
+.payment {
+    margin: 220px 45px 0px 43px;
+    gap: 44px;
+    padding-bottom: 123px;
+}
+
+.payment__upper {
+    gap: 12px;
+}
+
+.payment__upper__links a {
+    text-decoration: none;
+    color: var(--Neutral-725, #424242);
+    /* Paragraph/02/Regular */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+.payment__upper__title {
+    color: var(--Neutral-900, #090a0a);
+    font-family: "Playfair Display";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    /* 106.25% */
+    letter-spacing: -0.64px;
+    align-self: stretch;
+}
+
+.payment__down {
+    display: flex;
+    padding-bottom: 123px;
+    align-self: stretch;
+}
+
+.payment__down__left {
+    gap: 24px;
+    width: 45%;
+}
+
+.payment__down__left__header {
+    color: var(--Neutral-900, #090a0a);
+    margin: 0;
+    /* Heading/H6/SemiBold */
+    font-family: "Inter Display";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 28.5px */
+    letter-spacing: -0.38px;
+    height: 29px;
+    align-self: stretch;
+}
+
+.payment__down__left__cardDetails {
+    gap: 20px;
+    padding: 12px;
+    border: 1px solid var(--Neutral-100, #e1e3e3);
+}
+
+.payment__down__left__cardDetails__credit {
+    gap: 10px;
+    align-self: stretch;
+}
+
+.payment__down__left__cardDetails__credit__selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1 1 0;
+    align-self: stretch;
+}
+
+.payment__down__left__cardDetails__credit__selection p:nth-child(1) {
+    color: var(--Neutral-800, #2e2e2e);
+    margin: 0px;
+    /* Paragraph/02/SemiBold */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+}
+
+.payment__down__left__cardDetails__credit__selection p:nth-child(2) {
+    color: var(--Neutral-625, #555656);
+    /* Caption/Regular */
+    font-family: "Inter";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+}
+
+.input_header {
+    color: var(--Neutral-900, #090a0a);
+    /* Heading/H6-Small/SemiBold */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: -0.32px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.formInput::-webkit-outer-spin-button,
+.formInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.formInput[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.formInput {
+    display: flex;
+    height: 56px;
+    padding: 16px 12px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border: 1px solid var(--Neutral-100, #e1e3e3);
+    background: var(--Neutral-00, #fff);
+}
+
+.card-dropdown {
+    cursor: pointer;
+}
+
+.payment__down__left__cardDetails__form {
+    display: none;
+}
+
+
+.payment__down__left__cardDetails__form__saveCard {
+    gap: 8px;
+}
+
+.payment__down__left__cardDetails__form__saveCard input {
+    width: 24px;
+    height: 24px;
+}
+
+.payment__down__left__cardDetails__form__saveCard p {
+    color: var(--Neutral-800, #2e2e2e);
+    flex: 1 0 0;
+    /* Paragraph/02/Regular */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+.payment__down__left__cardDetails__paypal {
+    border: none;
+    outline: none;
+    gap: 10px;
+    border: 1px solid var(--Neutral-100, #e1e3e3);
+    background: var(--Neutral-00, #fff);
+    padding: 12px;
+}
+
+.payment__down__left__cardDetails__paypal div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.payment__down__left__cardDetails__paypal div p:nth-child(1) {
+    color: var(--Neutral-800, #2e2e2e);
+    flex: 0 1 0;
+    /* Paragraph/02/SemiBold */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+}
+
+.payment__down__left__cardDetails__paypal div p:nth-child(2) {
+    color: var(--Neutral-625, #555656);
+
+    /* Caption/Regular */
+    font-family: "Inter";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.payment__down__right {
+    gap: 32px;
+    width: 40%;
+}
+
+.payment__down__right__costSummary p {
+    margin: 0;
+}
+
+.payment__down__right__costSummary__header p {
+    color: var(--Neutral-900, #090a0a);
+    height: 29px;
+    align-self: stretch;
+    /* Heading/H6/SemiBold */
+    font-family: "Inter";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 28.5px */
+    letter-spacing: -0.38px;
+}
+
+.costSummary__item__price p:nth-child(1) {
+    flex: 1 0 0;
+    color: var(--Neutral-725, #424242);
+
+    /* Paragraph/02/Regular */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+.costSummary__item__price p:nth-child(2) {
+    color: var(--Neutral-725, #424242);
+
+    /* Paragraph/02/Regular */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+
+
+.costSummary__item__price p {
+    color: var(--Neutral-725, #424242);
+}
+
+
+.costSummary__item__total__price p:nth-child(1) {
+    color: var(--Primary-01, #060A0E);
+
+    /* Paragraph/03/SemiBold */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 27px */
+    flex: 1 0 0;
+}
+
+.costSummary__item__total__price p:nth-child(2) {
+    color: var(--Primary-01, #060A0E);
+    text-align: right;
+
+    /* Paragraph/03/SemiBold */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 27px */
+}
+
+
+.payment__down__right__costSummary__apply {
+    display: flex;
+    height: 48px;
+    padding: 16px 4px 16px 12px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border: 1px solid var(--Neutral-100, #e1e3e3);
+    background: var(--Neutral-00, #fff);
+}
+
+.payment__down__right__costSummary__apply input {
+    outline: none;
+    border: none;
+    color: var(--Neutral-275, #B0B1B1);
+    /* Paragraph/01/Regular */
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
+
+
+.payment__down__right__costSummary__apply button {
+    display: flex;
+    height: 40px;
+    padding: 16px 19px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 8px;
+    background: var(--Primary-04, #003A61);
+    outline: none;
+    border: none;
+}
+
+.costSummary__item__price {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.checkOut {
+    display: flex;
+    height: 56px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    background: var(--Primary-04, #003a61);
+}
+
+.checkOut button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--Neutral-00, #FFF);
+    text-align: center;
+    /* Heading/H6-Small/Bold */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: -0.32px;
+}
+
+@media (max-width:1024px) and (min-width:884px) {
+    .payment__down__left {
+        width: 58% !important;
+    }
+}
+
+@media (max-width:883px) {
+    .payment__down {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 40px;
+    }
+
+    .payment__down__left {
+        width: 85%;
+        align-self: center !important;
+    }
+
+    .payment__down__right {
+        width: 85%;
+    }
+}
+
+@media (max-width:768px) {
+    .payment__down {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 40px;
+    }
+
+    .payment__down__left {
+        width: 100%;
+        align-self: center !important;
+    }
+
+    .payment__down__right {
+        width: 100%;
+    }
+
+    .payment__down__left__cardDetails__form__cardDateCvv {
+        flex-direction: column;
+    }
+
+    .cardDate,
+    .cardCvv {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .cardDate input,
+    .cardCvv input {
+        width: 100%;
+    }
+
+    .payment__upper__links a {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .payment {
+        margin-block: 150px 20px;
+        padding-bottom: 5px;
+    }
+
+    .payment__down {
+        padding-bottom: 50px;
+    }
+
+    .payment__down__right__costSummary__apply input {
+        font-size: 10px;
+    }
+}
+
+.SelectCard {
+    border: 1px solid var(--Primary-04, #003A61);
+    background-color: rgba(212, 228, 251, 0.50);
+}
+
+.card__box {
+    padding: 8px 10px;
+}
+
+.SelectCard__card__details {
+    flex: 1 0 0;
+}
+
+.SelectCard__card__details p {
+    color: var(--Neutral-800, #2E2E2E);
+
+    /* Paragraph/02/Regular */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+
+.add-card-menu {
+    border: none;
+    outline: none;
+    display: flex;
+    height: 56px;
+    padding: 16px 19px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background-color: var(--Neutral-50, #F6F6F6);
+    color: var(--Neutral-725, #424242);
+    text-align: center;
+    /* Paragraph/02/SemiBold */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.cardMenu {
+    display: none;
+    background-color: rgba(132, 132, 132, 0.4);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    z-index: 1002;
+    overflow: scroll;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.cardMenu::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cardMenu {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.menu__add__newCard {
+    margin: auto;
+    margin-top: 20px;
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+    gap: 24px;
+}
+
+.menu__add__newCard__button {
+    display: flex;
+    height: 48px;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    color: var(--Neutral-00, #FFF);
+    text-align: center;
+
+    /* Heading/H6-Small/Bold */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: -0.32px;
+    outline: none;
+    border: none;
+    background-color: var(--Primary-04, #003A61);
+}
+
+.header {
+    color: var(--Primary-01, #060A0E);
+
+    /* Heading/H4-Small/Bold */
+    font-family: "Inter Display";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 34.5px */
+    letter-spacing: -0.46px;
+    align-self: stretch;
+    flex: 1 0 0;
+}
+
+.form__upper:nth-last-child() {
+    align-self: stretch;
+    color: rgba(85, 86, 86, 1);
+
+    /* Paragraph/01/Regular */
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
+
+.menu__add__newCard__form {
+    gap: 20px;
+}
+
+@media (max-width:1200px) {
+    .menu__add__newCard {
+        width: 45%;
+    }
+}
+
+@media (max-width:1024px) {
+    .menu__add__newCard {
+        width: 50%;
+    }
+}
+
+@media (max-width:991px) {
+    .menu__add__newCard {
+        width: 60%;
+    }
+}

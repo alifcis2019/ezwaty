@@ -57,6 +57,12 @@
     transition: all 0.4s;
 }
 
+@media (max-width:1024px) {
+    .scroll-top{
+        bottom:  70px;
+    }
+}
+
 .scroll-top i {
     font-size: 24px;
     color: white;
@@ -360,16 +366,6 @@
 
 
 @media (max-width:991px) {
-    .navBarThree {
-        display: flex !important;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1000;
-    }
-
-
-
     .navbar:nth-child(1) {
         display: none !important;
     }
@@ -391,7 +387,9 @@
     background-color: #003A61;
     padding-block: 10px;
     position: fixed;
-    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .navBarThree__header {
@@ -436,23 +434,57 @@
 }
 
 .navBarThree {
-    transition: 1s;
+    /* transition:all ; */
 }
 
 .navbarThree__subMenu {
+    padding-block: 50px;
     display: none;
-    padding-block: 5px;
+    position: fixed;
+    background-color:var(--color-primary);
+    top: 0%;
+    left: 0;
+    bottom: 0;
+    width: 70%;
 }
 
-.navbarClose {
-    display: none;
+.navBarThree__links  {
+    flex-direction: column;
+}
+
+.navBarThree__links ul li  a {
+    color: white;
+}
+
+.navBarThree__links ul li {
+    padding-inline: 30px;
+    padding-block: 10px;
 }
 
 .navBarThree__links .active {
     background-color: #003A65;
 }
 
+.navBarThree__links .active a {
+    color: white;
+}
 
+.user_mobile{
+    display: none !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: var(--color-primary);
+    padding-block: 10px;
+}
+
+@media (max-width:991px) {
+    .user_mobile {
+        display: flex !important;
+    }
+}
 /* start logged in menue */
 .loggedIn {
     visibility: hidden;
@@ -889,9 +921,6 @@ footer {
     gap: 44px;
 }
 
-.footer__upper__ezawty {
-    width: 341px;
-}
 
 .footer__upper__ezawty p:nth-child(1) {
     color: var(--Neutral-00, #FFF);
@@ -907,12 +936,13 @@ footer {
 .footer__upper__ezawty p:nth-child(2) {
     color: var(--Neutral-00, #FFF);
     /* Paragraph/02/Regular */
-    font-family: Inter;
+    font-family: "Inter";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     opacity: .8;
+    max-width: 250px;
 }
 
 .footer__upper__quickLink {

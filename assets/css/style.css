@@ -101,6 +101,45 @@ body {
     .home {
         margin-top: 50px !important;
     }
+
+    .hero {
+        height: 90vh !important;
+    }
+
+    .homeContent p:nth-child(2) {
+        width: 671px;
+        color: var(--Neutral-00, #FFF);
+        text-align: center;
+        /* Display/02/ExtraBold */
+        font-family: Playfair Display;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        /* 90px */
+        letter-spacing: -2.4px;
+        margin: 0;
+    }
+
+
+    .homeButtons {
+        flex-direction: column;
+    }
+    .homeButtons button {
+        width: 100% !important;
+    }
+
+    .homeContent p {
+        width: 80% !important;
+        text-align: center !important;
+        margin: auto !important;
+        /* margin-block: 5px !important; */
+    }
+
+    .home__upper {
+        gap: 10px;
+    }
+
 }
 
 
@@ -220,6 +259,13 @@ body {
 @media (max-width:786px) {
     .discoverHall__second__card {
         width: 100% !important;
+    }
+    
+
+    .discoverHall__first {
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start !important;
     }
 }
 
@@ -397,6 +443,9 @@ body {
 @media (max-width:1200px) {
     .customizeYourEvent {
         flex-direction: column;
+    }
+    .customizeYourEvent__left {
+        width: 100%;
     }
 }
 
@@ -796,21 +845,6 @@ body {
     .customizeYourEvent__left p:nth-child(3) {
         width: 300px !important;
         align-items: flex-start !important;
-    }
-
-    .homeContent {
-        width: 100% !important;
-    }
-
-    .homeContent p {
-        width: 80% !important;
-        text-align: center !important;
-        margin: auto !important;
-        /* margin-block: 5px !important; */
-    }
-
-    .homeButtons button {
-        width: auto !important;
     }
 }
 
