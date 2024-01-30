@@ -35,7 +35,7 @@ body {
 .homeContent p:nth-child(1) {
     color: var(--Neutral-100, #E1E3E3);
     /* Subheading/Regular */
-    font-family: Inter;
+    font-family: "Inter";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -49,7 +49,7 @@ body {
     color: var(--Neutral-00, #FFF);
     text-align: center;
     /* Display/02/ExtraBold */
-    font-family: Playfair Display;
+    font-family: "Playfair Display";
     font-size: 60px;
     font-style: normal;
     font-weight: 800;
@@ -63,7 +63,7 @@ body {
     color: var(--Neutral-200, #C8C9C9);
     text-align: center;
     /* Paragraph/02/Regular */
-    font-family: Inter;
+    font-family: "Inter";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -75,7 +75,7 @@ body {
     margin: 0;
 }
 
-.homeButtons button {
+.homeButtons a {
     display: flex;
     width: 222px;
     height: 56px;
@@ -85,14 +85,20 @@ body {
     gap: 12px;
     border: none;
     outline: none;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.homeButtons button:nth-child(1) {
+.homeButtons a:nth-child(1) {
     background-color: rgba(0, 58, 97, 1);
     color: white;
 }
 
-.homeButtons button:nth-child(2) {
+.homeButtons a:nth-child(1):hover {
+    color: white;
+}
+
+.homeButtons a:nth-child(2) {
     background-color: rgba(245, 228, 208, 1);
     color: black;
 }
@@ -100,10 +106,11 @@ body {
 @media (max-width:991px) {
     .home {
         margin-top: 50px !important;
+        gap: 80px;
     }
 
     .hero {
-        height: 90vh !important;
+        height: 75vh !important;
     }
 
     .homeContent p:nth-child(2) {
@@ -125,8 +132,12 @@ body {
     .homeButtons {
         flex-direction: column;
     }
-    .homeButtons button {
+    .homeButtons a {
         width: 100% !important;
+    }
+
+    .homeContent {
+        gap: 25px;
     }
 
     .homeContent p {
@@ -137,9 +148,65 @@ body {
     }
 
     .home__upper {
-        gap: 10px;
+        gap: 50px;
+        margin-top: 180px;
     }
 
+}
+
+@media (max-width:768px) {
+    .home {
+        margin-top: 114px !important;
+        gap: 40px;
+    }
+
+    .home__upper {
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .homeContent p:nth-child(2) {
+        font-size: 30px;
+    }
+
+    .homeContent p:nth-last-of-type() {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:374px) {
+    .hero {
+        height: 90vh !important;
+    }
+    .home {
+        gap: 50px;
+    }
+    .homeContent {
+        gap: 15px;
+    }
+
+    .homeButtons {
+        gap: 15px !important;
+    }
+
+    .home__upper {
+        gap: 50px;
+        margin-top: 80px
+    }
+}
+
+@media (max-width:320px) {
+    .home__upper {
+        margin-top: 15px;
+        gap: 10px;
+    }
+    .home {
+        gap: 15px;
+    }
+
+    .homeContent {
+        gap: 10px;
+    }
 }
 
 
@@ -210,7 +277,7 @@ body {
     margin: 0;
 }
 
-.discoverHall__first__button button {
+.discoverHall__first__button a {
     border: 1px solid rgba(225, 227, 227, 1);
     outline: none;
     background-color: white;
@@ -219,6 +286,8 @@ body {
     font-size: 16px;
     font-family: "Inter";
     height: 48px;
+    text-decoration: none;
+    color: var(--Neutral-725, #424242);
     letter-spacing: -0.32px;
 }
 
@@ -239,6 +308,9 @@ body {
 
 .discoverHall__second__card {
     width: 23.5%;
+}
+.discoverHall__second__card img {
+    border-radius: 10px 10px 0px 0px;
 }
 
 @media (max-width:1325px) {
@@ -271,6 +343,8 @@ body {
     gap: 16px;
     padding: 8px 10px 10px 10px;
     background: var(--Neutral-00, #FFF);
+    box-shadow: 5px 5px 10px rgb(177, 175, 175);
+    border-radius: 0px 0px 10px 10px;
 }
 
 
@@ -316,7 +390,7 @@ body {
     line-height: 150%;
 }
 
-.discoverHall__second__card__second__second div:nth-child(2) {
+.discoverHall__second__card__second__second a {
     display: flex;
     width: 170px;
     height: 48px;
@@ -326,12 +400,13 @@ body {
     gap: 10px;
     background: var(--Primary-04, #003A61);
     color: white;
-    font-family: Inter Display;
+    font-family: "Inter";
     font-size: 16px;
+    text-decoration: none;
 }
 
-
 .addWishList {
+    cursor: pointer;
     display: flex;
     width: 40px;
     height: 40px;
@@ -346,6 +421,12 @@ body {
     background: rgba(9, 10, 10, 0.50);
 }
 
+@media (max-width:375px) {
+    .discoverHall__second__card__second__second a{
+        width: 110px !important;
+    }
+}
+
 /* invitaion Cards */
 .invitaionCards__container {}
 
@@ -355,30 +436,42 @@ body {
     ;
 }
 
-.invitaionCards__title__text h6 {
+.invitaionCards__title__text p:nth-child(1) {
     color: rgba(85, 86, 86, 1);
+    margin: 0;
 }
 
-.invitaionCards__title__text h3 {
+.invitaionCards__title__text p:nth-child(2) {
     font-family: "Playfair";
     color: rgba(9, 10, 10, 1);
     font-weight: 700;
     line-height: 42px;
     font-size: 32px;
+    margin: 0;
 }
 
-.invitaionCards__title__button button {
+.invitaionCards__title__button a {
     border: 1px solid rgba(225, 227, 227, 1);
     outline: none;
     background-color: white;
-    padding: 16px 10px;
+    padding: 16px 24px;
     font-weight: 600;
     font-size: 16px;
     font-family: "Inter";
+    height: 48px;
+    text-decoration: none;
+    color: var(--Neutral-725, #424242);
+    letter-spacing: -0.32px;
 }
 
 .invitaionCards__container__card {
     background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(208, 205, 205);
+}
+
+.invitaionCards__container__card img {
+    border-radius: 10px;
 }
 
 /* gold card */
@@ -454,6 +547,13 @@ body {
 
     .howItWorks__downPart__card {
         width: 100% !important;
+    }
+
+    .invitaionCards__title {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 25px;
+        text-align: left;
     }
 }
 
@@ -552,6 +652,12 @@ body {
     padding: 16px 24px;
 }
 
+@media (max-width:375px) {
+    .invitaionCards__container__card__cardDetails p:nth-child(1) {
+        font-size: 14px;
+    }
+}
+
 
 /* customizeYourEvent */
 
@@ -631,6 +737,7 @@ body {
 .customizeYourEvent__right img {
     filter: brightness(.5);
     height: 184px;
+    border-radius: 10px;
 }
 
 .customYourEvent__special button {
@@ -759,6 +866,7 @@ body {
 
 .frequentlyAsked__downPart__image img {
     width: 702px !important;
+    border-radius: 10px;
 }
 
 /* accordion */
@@ -846,10 +954,17 @@ body {
     }
 }
 
+@media (max-width:768px) {
+    .customizeYourEvent__right__down {
+        flex-direction: column;
+    }
+}
+
 /* start unleash */
 .unleash {
     padding-block: 102px 198px;
 }
+
 
 .unleash__container {
     padding-block: 72px 88px;
@@ -860,6 +975,7 @@ body {
     background: linear-gradient(87deg, #F5E4D0 17.17%, #F5E4D0 51.3%, rgba(8, 7, 6, 0.00) 126.05%), url(/assets/images/home/unleash.png);
     background-repeat: no-repeat !important;
     background-size: cover;
+    border-radius: 10px;
 }
 
 .unleash p:nth-child(1) {
@@ -885,7 +1001,7 @@ body {
     max-width: 50%;
 }
 
-.unleash__container div:nth-child(2) {
+.unleash__container a {
     display: flex;
     height: 56px;
     padding: 16px 32px;
@@ -893,9 +1009,10 @@ body {
     align-items: center;
     gap: 12px;
     background: var(--Primary-04, #003A61);
+    text-decoration: none;
 }
 
-.unleash__container div:nth-child(2) p:nth-child(1) {
+.unleash__container a p:nth-child(1) {
     color: var(--Neutral-00, #FFF);
     text-align: center;
     /* Heading/H6-Small/Bold */
@@ -906,6 +1023,21 @@ body {
     line-height: 150%;
     /* 24px */
     letter-spacing: -0.32px;
+}
+
+@media (max-width:767px) {
+    .unleash p:nth-child(1),
+    .unleash p:nth-child(2) {
+        max-width: 100%;
+    }
+
+    .unleash  {
+        padding: 20px !important;
+    }
+
+    .unleash__container {
+        padding: 15px !important;
+    }
 }
 
 

@@ -84,6 +84,25 @@ document.querySelector(".userNotification").addEventListener('click', (e) => {
     }
 })
 
+// empty favourite list
+
+document.querySelector(".close__emptyFavouriteList").addEventListener('click',()=>{
+    document.querySelector('.emptyFavouriteList').style.visibility = "hidden"
+})
+
+
+// close__favouriteList
+
+document.querySelector(".close__favouriteList").addEventListener('click',()=>{
+    document.querySelector('.favouriteList').style.visibility = "hidden"
+})
+
+// close__notification
+
+document.querySelector(".close__notification__subMenu").addEventListener('click',()=>{
+    document.querySelector('.notification__subMenu').style.visibility = "hidden"
+})
+
 
 // navbar Tab on mobile Handle
 
@@ -94,7 +113,7 @@ document.querySelector(".navbarTab").addEventListener('click', (e) => {
         open=true
     }
     else {
-        document.querySelector(".navbarThree__subMenu").style.left="-350px"
+        document.querySelector(".navbarThree__subMenu").style.left="-100%"
         open = false
     }
 }
@@ -102,7 +121,7 @@ document.querySelector(".navbarTab").addEventListener('click', (e) => {
 
 document.querySelector(".navbarClose").addEventListener('click', () => {
     open = false
-    document.querySelector(".navbarThree__subMenu").style.left = "-350px";
+    document.querySelector(".navbarThree__subMenu").style.left = "-100%";
 })
 
 
