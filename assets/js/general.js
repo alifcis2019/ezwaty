@@ -90,11 +90,11 @@ document.querySelector(".userNotification").addEventListener('click', (e) => {
 let open =false
 document.querySelector(".navbarTab").addEventListener('click', (e) => {
     if(!open){
-        document.querySelector(".navbarThree__subMenu").style.display = "flex"
+        document.querySelector(".navbarThree__subMenu").style.left = "0%"
         open=true
     }
     else {
-        document.querySelector(".navbarThree__subMenu").style.display="none"
+        document.querySelector(".navbarThree__subMenu").style.left="-350px"
         open = false
     }
 }
@@ -102,7 +102,7 @@ document.querySelector(".navbarTab").addEventListener('click', (e) => {
 
 document.querySelector(".navbarClose").addEventListener('click', () => {
     open = false
-    document.querySelector(".navbarThree__subMenu").style.display = "none";
+    document.querySelector(".navbarThree__subMenu").style.left = "-350px";
 })
 
 

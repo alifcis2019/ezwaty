@@ -152,14 +152,12 @@ body {
 .scrollDown__first {
     /* top: 0; */
     animation: animate 1.5s linear infinite;
-    z-index: 1;
     color: white;
 }
 
 .scrollDown__second {
     animation: animate 1.5s linear infinite;
     animation-delay: 1s;
-    z-index: 1;
     color: white;
 }
 

@@ -182,9 +182,10 @@
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact US</a></li>
             </ul>
-            <div class="secondNavButton d-flex align-items-center justify-content-center">
+            <!-- link to creat event page -->
+            <a href="" class="secondNavButton d-flex align-items-center justify-content-center">
                 Create Event
-            </div>
+            </a>
         </div>
     </header>
     <!-- End Header -->
@@ -1022,11 +1023,11 @@
     <!-- end footer -->
 
     <!-- start navbar three -->
-    <div class="navBarThree px-5 d-flex justify-content-between flex-column gap-3">
+    <div class="navBarThree px-5 d-flex justify-content-between flex-column gap-3 shadow-lg">
         <div class="logo d-flex justify-content-between align-items-center flex-grow-1">
             <a class="navbar-brand p-0" href="#">Ezwaty</a>
             <div class="navbarTab bg-transparent outline-0 border-0">
-                <i class="fa-solid fa-bars text-light  fs-3"></i>
+                <i class="fa-solid fa-bars text-light  fs-2"></i>
             </div>
         </div>
         <!-- <div class="searchBlock d-flex align-items-center justify-content-between w-100">
@@ -1055,7 +1056,7 @@
                 </svg>
             </div> 
         </div>-->
-        <div class="navbarThree__subMenu flex-column shadow-lg">
+        <div class="navbarThree__subMenu flex-column">
             <div class="navBarThree__links ">
                 <ul class="d-flex flex-column gap-1 align-items-start justify-content-between secondNavList">
                     <li class="active"><a href="" >Home</a></li>
@@ -1067,73 +1068,75 @@
                     <li><a href="">FAQ</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact US</a></li>
+                    <li>
+                        <div class="userLanguage d-flex align-items-center justify-content-between">
+                        <img src="assets/images/general/language.jpg" alt="">
+                        <!-- dropDown Languages -->
+                        <div class="userLanguage__selection d-flex align-items-center">
+                            <p class="userLanguage__selection__language">English</p>
+                            <div class="userLanguage__selection__arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div class="navbarClose position-absolute top-0 end-0">
+            <div class="navbarClose position-absolute">
                 <i class="fa-solid fa-xmark text-light fs-3"></i>
             </div>
         </div>
-        
-    </div>
-    <div class="px-5 user_mobile d-flex align-items-center justify-content-center gap-1">
-        <div class="userLanguage d-flex align-items-center justify-content-between">
-            <img src="assets/images/general/language.jpg" alt="">
-            <!-- dropDown Languages -->
-            <div class="userLanguage__selection d-flex align-items-center">
-                <p class="userLanguage__selection__language">English</p>
-                <div class="userLanguage__selection__arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none">
+        <div class="user_mobile d-flex align-items-center justify-content-end">       
+            <div class="userSystem d-flex align-items-center justify-content-between">
+                <!-- user notification -->
+                <div class="userNotification">
+                    <a href="/assets/pages/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
                         <path
-                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
-                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                            d="M23.6715 15.3606H24.6137V15.3359L24.6125 15.3111L23.6715 15.3606ZM23.6715 18.5128H22.7292V18.8633L22.9582 19.1285L23.6715 18.5128ZM26.3832 24.7945V25.7368H27.3254V24.7945H26.3832ZM26.3832 21.6537H27.3254C27.3254 21.4275 27.2441 21.2091 27.0964 21.0379L26.3832 21.6537ZM6.48058 15.3606L5.53961 15.3111L5.53832 15.3359V15.3606H6.48058ZM6.48058 18.5128L7.19381 19.1285L7.42284 18.8633V18.5128H6.48058ZM3.76892 24.7945H2.82666V25.7368H3.76892V24.7945ZM3.76892 21.6537L3.05569 21.0379C2.90795 21.2091 2.82666 21.4275 2.82666 21.6537H3.76892ZM15.076 8.14795C19.1528 8.14795 22.5162 11.3391 22.7306 15.4101L24.6125 15.3111C24.3455 10.2391 20.1551 6.26343 15.076 6.26343V8.14795ZM22.7292 15.3606V18.5128H24.6137V15.3606H22.7292ZM22.9582 19.1285L25.6699 22.2694L27.0964 21.0379L24.3847 17.8971L22.9582 19.1285ZM25.4409 21.6537V24.7945H27.3254V21.6537H25.4409ZM15.076 6.26343C9.99698 6.26343 5.80658 10.2391 5.53961 15.3111L7.42153 15.4101C7.6358 11.3391 10.9993 8.14795 15.076 8.14795V6.26343ZM5.53832 15.3606V18.5128H7.42284V15.3606H5.53832ZM3.76892 25.7368H26.3832V23.8523H3.76892V25.7368ZM5.76735 17.8971L3.05569 21.0379L4.48215 22.2694L7.19381 19.1285L5.76735 17.8971ZM2.82666 21.6537V24.7945H4.71118V21.6537H2.82666Z"
+                            fill="white" />
+                        <path
+                            d="M13.1917 5.32104C13.1917 6.36184 14.0354 7.20556 15.0762 7.20556C16.1169 7.20556 16.9607 6.36184 16.9607 5.32104C16.9607 4.28025 16.1169 3.43652 15.0762 3.43652C14.0354 3.43652 13.1917 4.28025 13.1917 5.32104Z"
+                            stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                        <path
+                            d="M18.8452 24.7944C18.8452 26.8761 17.1578 28.5635 15.0762 28.5635C12.9945 28.5635 11.3071 26.8761 11.3071 24.7944"
+                            stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                        <path
+                            d="M16.4544 10.1392C17.0465 13.1818 19.9931 15.1682 23.0355 14.5761C26.078 13.9841 28.0646 11.0376 27.4725 7.99505C26.8804 4.95248 23.9338 2.96603 20.8914 3.5581C17.8489 4.15016 15.8623 7.09662 16.4544 10.1392Z"
+                            fill="#D61C2A" stroke="#003A61" stroke-width="1.62058" stroke-linejoin="round" />
+                    </svg></a>
+                </div>
+                <div class="line"></div>
+                <div class="userWishlist">
+                    <a href="/assets/pages/profile.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M23.8432 5.62846C18.8282 2.9388 15.2274 6.90366 15.2274 6.90366C15.2274 6.90366 11.6263 2.93879 6.61139 5.62845C0.537316 8.88615 0.101149 21.6435 15.2274 27.3071C30.3535 21.6435 29.9172 8.88617 23.8432 5.62846Z"
+                                stroke="white" stroke-width="1.88452" stroke-linecap="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="line"></div>
+                <div class="userLogin position-relative">
+                    <a href="assets/pages/signup/logIn.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M15.3808 28.5635C22.3195 28.5635 27.9443 22.9386 27.9443 16C27.9443 9.06138 22.3195 3.43652 15.3808 3.43652C8.44224 3.43652 2.81738 9.06138 2.81738 16C2.81738 22.9386 8.44224 28.5635 15.3808 28.5635Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M9.72729 22.2817C12.6567 19.2135 18.0735 19.069 21.0344 22.2817M18.5156 12.8591C18.5156 14.5938 17.1073 16 15.3702 16C13.6332 16 12.2249 14.5938 12.2249 12.8591C12.2249 11.1245 13.6332 9.71826 15.3702 9.71826C17.1073 9.71826 18.5156 11.1245 18.5156 12.8591Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="userSystem d-flex align-items-center justify-content-between">
-            <!-- user notification -->
-            <div class="userNotification">
-                <a href="/assets/pages/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
-                    <path
-                        d="M23.6715 15.3606H24.6137V15.3359L24.6125 15.3111L23.6715 15.3606ZM23.6715 18.5128H22.7292V18.8633L22.9582 19.1285L23.6715 18.5128ZM26.3832 24.7945V25.7368H27.3254V24.7945H26.3832ZM26.3832 21.6537H27.3254C27.3254 21.4275 27.2441 21.2091 27.0964 21.0379L26.3832 21.6537ZM6.48058 15.3606L5.53961 15.3111L5.53832 15.3359V15.3606H6.48058ZM6.48058 18.5128L7.19381 19.1285L7.42284 18.8633V18.5128H6.48058ZM3.76892 24.7945H2.82666V25.7368H3.76892V24.7945ZM3.76892 21.6537L3.05569 21.0379C2.90795 21.2091 2.82666 21.4275 2.82666 21.6537H3.76892ZM15.076 8.14795C19.1528 8.14795 22.5162 11.3391 22.7306 15.4101L24.6125 15.3111C24.3455 10.2391 20.1551 6.26343 15.076 6.26343V8.14795ZM22.7292 15.3606V18.5128H24.6137V15.3606H22.7292ZM22.9582 19.1285L25.6699 22.2694L27.0964 21.0379L24.3847 17.8971L22.9582 19.1285ZM25.4409 21.6537V24.7945H27.3254V21.6537H25.4409ZM15.076 6.26343C9.99698 6.26343 5.80658 10.2391 5.53961 15.3111L7.42153 15.4101C7.6358 11.3391 10.9993 8.14795 15.076 8.14795V6.26343ZM5.53832 15.3606V18.5128H7.42284V15.3606H5.53832ZM3.76892 25.7368H26.3832V23.8523H3.76892V25.7368ZM5.76735 17.8971L3.05569 21.0379L4.48215 22.2694L7.19381 19.1285L5.76735 17.8971ZM2.82666 21.6537V24.7945H4.71118V21.6537H2.82666Z"
-                        fill="white" />
-                    <path
-                        d="M13.1917 5.32104C13.1917 6.36184 14.0354 7.20556 15.0762 7.20556C16.1169 7.20556 16.9607 6.36184 16.9607 5.32104C16.9607 4.28025 16.1169 3.43652 15.0762 3.43652C14.0354 3.43652 13.1917 4.28025 13.1917 5.32104Z"
-                        stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
-                    <path
-                        d="M18.8452 24.7944C18.8452 26.8761 17.1578 28.5635 15.0762 28.5635C12.9945 28.5635 11.3071 26.8761 11.3071 24.7944"
-                        stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
-                    <path
-                        d="M16.4544 10.1392C17.0465 13.1818 19.9931 15.1682 23.0355 14.5761C26.078 13.9841 28.0646 11.0376 27.4725 7.99505C26.8804 4.95248 23.9338 2.96603 20.8914 3.5581C17.8489 4.15016 15.8623 7.09662 16.4544 10.1392Z"
-                        fill="#D61C2A" stroke="#003A61" stroke-width="1.62058" stroke-linejoin="round" />
-                </svg></a>
-            </div>
-            <div class="line"></div>
-            <div class="userWishlist">
-                <a href="/assets/pages/profile.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
-                        <path
-                            d="M23.8432 5.62846C18.8282 2.9388 15.2274 6.90366 15.2274 6.90366C15.2274 6.90366 11.6263 2.93879 6.61139 5.62845C0.537316 8.88615 0.101149 21.6435 15.2274 27.3071C30.3535 21.6435 29.9172 8.88617 23.8432 5.62846Z"
-                            stroke="white" stroke-width="1.88452" stroke-linecap="round" />
-                    </svg>
-                </a>
-            </div>
-            <div class="line"></div>
-            <div class="userLogin position-relative">
-                <a href="assets/pages/signup/logIn.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
-                        <path
-                            d="M15.3808 28.5635C22.3195 28.5635 27.9443 22.9386 27.9443 16C27.9443 9.06138 22.3195 3.43652 15.3808 3.43652C8.44224 3.43652 2.81738 9.06138 2.81738 16C2.81738 22.9386 8.44224 28.5635 15.3808 28.5635Z"
-                            stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
-                        <path
-                            d="M9.72729 22.2817C12.6567 19.2135 18.0735 19.069 21.0344 22.2817M18.5156 12.8591C18.5156 14.5938 17.1073 16 15.3702 16C13.6332 16 12.2249 14.5938 12.2249 12.8591C12.2249 11.1245 13.6332 9.71826 15.3702 9.71826C17.1073 9.71826 18.5156 11.1245 18.5156 12.8591Z"
-                            stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
-                    </svg>
-                </a>
-            </div>
-        </div>
     </div>
+    
     <!-- end navbar three -->
 
     <!-- empty favourite List -->
