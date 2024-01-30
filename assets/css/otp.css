@@ -155,7 +155,6 @@
 .codeBlock__number {
     color: var(--Success-450, #2F9624);
     text-align: center;
-
     /* Paragraph/03/SemiBold */
     font-family: Inter;
     font-size: 18px;
@@ -178,6 +177,7 @@
     align-items: center;
     gap: 12px;
     align-self: stretch;
+    text-decoration: none;
     background: var(--Primary-04, #003A61);
 }
 
@@ -203,6 +203,7 @@
     align-items: center;
     gap: 12px;
     align-self: stretch;
+    text-decoration: none;
     background: var(--Neutral-100, #E1E3E3);
 }
 
@@ -229,14 +230,39 @@
     /* 24px */
 }
 
+input {
+    border: none;
+    outline: none;
+}
+
 @media (max-width:991px) {
+
+    .logIn{
+        height: 100%;
+    }    
     .logIn__rightSide {
         display: none !important;
+    }
+
+    .logIn__leftSide__form {
+        width: 80%;
+    }
+
+    .logIn__leftSide__header {
+        padding: 2rem !important;
     }
 }
 
 @media (max-width:771px) {
     .logIn {
         display: block !important;
+    }
+
+    .codeBlock {
+        padding: 5px;
+    }
+
+    .logIn__leftSide__form__data__block__input {
+        width: 100%;
     }
 }

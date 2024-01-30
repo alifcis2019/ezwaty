@@ -178,7 +178,9 @@
     align-items: center;
     gap: 12px;
     align-self: stretch;
+    text-decoration: none;
     background: var(--Primary-04, #003A61);
+    cursor: pointer;
 }
 
 .logIn__leftSide__form__button p {
@@ -203,6 +205,8 @@
     align-items: center;
     gap: 12px;
     align-self: stretch;
+    text-decoration: none;
+    cursor: pointer;
     background: var(--Neutral-100, #E1E3E3);
 }
 
@@ -229,14 +233,26 @@
     /* 24px */
 }
 
+.logIn__leftSide__form__data__block__input {
+    width: 100%;
+}
+
 @media (max-width:991px) {
     .logIn__rightSide {
         display: none !important;
     }
+    .logIn__leftSide__form {
+        width: 80%;
+    }
+    
 }
 
 @media (max-width:771px) {
     .logIn {
         display: block !important;
+    }
+
+    .codeBlock {
+        padding: 5px;
     }
 }

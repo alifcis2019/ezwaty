@@ -84,6 +84,12 @@
     width: 60% ;
 }
 
+.logIn__leftSide__form input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
 .logIn__leftSide__form__upper {
     gap: 32px;
 }
@@ -169,6 +175,7 @@ input[type=number] {
 }
 
 .logIn__leftSide__form__button {
+    text-decoration: none;
     display: flex;
     height: 56px;
     padding: 16px 32px;
@@ -192,6 +199,34 @@ input[type=number] {
     /* 24px */
     letter-spacing: -0.32px;
 }
+
+input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+}
+
+input[type='date'] {
+    flex: 1 0 0;
+}
+
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    flex: 1 0 0;
+}
+.datePicker {
+    cursor: pointer;
+}
+
 
 .logIn__leftSide__form__createAccount p:nth-child(1) {
     color: var(--Neutral-625, #555656);
@@ -218,6 +253,7 @@ input[type=number] {
 }
 
 
+
 .fname__box {
     padding: 16px 12px;
     border: 1px solid var(--Neutral-100, #E1E3E3);
@@ -240,10 +276,37 @@ input[type=number] {
     .logIn__rightSide {
         display: none !important;
     }
+
+    .logIn__leftSide__form {
+        width: 85%;
+    }
+
+    .logIn__leftSide__header {
+        padding: 2rem !important;
+    }
+
+    .signup__name__info {
+        flex-direction: column;
+    }
+
+    .signup__name__info div {
+        width: 100%;
+    }
+
+    .signup__gender__Bdate {
+        flex-direction: column;
+    }
+
+    .signup__gender__Bdate div {
+        width: 100%;
+    }
 }
 
 @media (max-width:771px) {
     .logIn {
         display: block !important;
+    }
+    .logIn__leftSide__form__data__block__input {
+        gap: 5px !important;
     }
 }

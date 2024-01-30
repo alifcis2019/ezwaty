@@ -48,7 +48,7 @@
                         </p>
                     </div>
                     <div class="logIn__leftSide__form__data d-flex flex-column">
-                        <div class="d-flex align-items-center justify-content-between" style="gap: 20px;">
+                        <div class="signup__name__info d-flex align-items-center justify-content-between" style="gap: 20px;">
                             <div class="fName d-flex flex-column" style="gap: 12px;" >
                                 <p class="m-0 form__title">First Name</p>
                                 <div class="fname__box">
@@ -79,7 +79,7 @@
                                 <input type="number" class="border-0" placeholder="_ _ _ _ _ _ _ _ _">
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between" style="gap: 20px;">
+                        <div class="signup__gender__Bdate d-flex align-items-center justify-content-between" style="gap: 20px;">
                             <div class="fName d-flex flex-column" style="gap: 12px;" >
                                 <p class="m-0 form__title">Gender</p>
                                 <div class="fname__box d-flex align-items-center justify-content-between">
@@ -91,8 +91,8 @@
                             </div>
                             <div class="Lname d-flex flex-column" style="gap: 12px;">
                                 <p class="m-0 form__title">Birth Date</p>
-                                <div class="fname__box d-flex align-items-center justify-content-between">
-                                    <input type="text" class="border-0" placeholder="DD:MM:YYYY">
+                                <div class="fname__box datePicker d-flex align-items-center justify-content-between position-relative">
+                                    <input type="date" class="border-0 position-relative" placeholder="DD:MM:YYYY">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M11.9955 13.5H12.0045M11.9955 17.5H12.0045M15.991 13.5H16M8 13.5H8.00897M8 17.5H8.00897" stroke="#090A0A" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
                                         <path d="M17.5 2V6M6.5 2V6" stroke="#090A0A" stroke-width="1.5" stroke-linejoin="round"/>
@@ -111,25 +111,24 @@
                                 </svg>
                                 <!-- dropdown phone number -->
                                 <input type="password" class="border-0" placeholder="***********">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z" stroke="#141B34" stroke-width="1.5"/>
-                                    <path d="M12 5C17.5228 5 22 12 22 12C22 12 17.5228 19 12 19C6.47715 19 2 12 2 12C2 12 6.47715 5 12 5Z" stroke="#141B34" stroke-width="1.5"/>
-                                </svg>
+                                <div class="showPassword">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z" stroke="#141B34" stroke-width="1.5"/>
+                                        <path d="M12 5C17.5228 5 22 12 22 12C22 12 17.5228 19 12 19C6.47715 19 2 12 2 12C2 12 6.47715 5 12 5Z" stroke="#141B34" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                         <div class="d-flex align-items-start" style="gap: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <path d="M22.1667 3.5C23.4553 3.5 24.5 4.54467 24.5 5.83333V22.1667C24.5 23.4553 23.4553 24.5 22.1667 24.5H5.83333C4.54467 24.5 3.5 23.4553 3.5 22.1667V5.83333C3.5 4.54467 4.54467 3.5 5.83333 3.5H22.1667Z" stroke="#6B6C6C" stroke-width="1.75"/>
-                                <path d="M9.33325 14.5833L12.2499 17.5L18.6666 10.5" stroke="white" stroke-width="1.75"/>
-                            </svg>
+                            <input type="checkbox" name="" id="">
                             <p class="m-0">By Clicking this you will agree on <a href="" class="text-dark">Privacy Policy</a> , <a href="" class="text-dark">Terms & <br> Conditions</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex flex-column" style="gap: 24px;">
-                    <div class="logIn__leftSide__form__button">
+                    <a href="/assets/pages/signup/verifyNumber.html" class="logIn__leftSide__form__button">
                         <p class="m-0">Create Account</p>
-                    </div>
+                    </a>
                     <div class="logIn__leftSide__form__createAccount d-flex align-self-center">
                         <p>Already have an account? </p>
                         <a href="/assets/pages/signup/logIn.html" class="text-decoration-none">Log in</a>

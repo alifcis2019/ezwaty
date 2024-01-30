@@ -166,9 +166,12 @@ input[type=number] {
 
 .logIn__leftSide__form__data__block__input input {
     flex: 1 0 0;
+    border: none;
+    outline: none;
 }
 
 .logIn__leftSide__form__button {
+    cursor: pointer;
     display: flex;
     height: 56px;
     padding: 16px 32px;
@@ -176,6 +179,7 @@ input[type=number] {
     align-items: center;
     gap: 12px;
     align-self: stretch;
+    text-decoration: none;
     background: var(--Primary-04, #003A61);
 }
 
@@ -222,10 +226,27 @@ input[type=number] {
     .logIn__rightSide {
         display: none !important;
     }
+    .logIn__leftSide__form  {
+        margin-top: 20px ;
+    }
+
+    .logIn__leftSide__header {
+        padding: 2rem !important;
+    }
 }
 
 @media (max-width:771px) {
     .logIn {
         display: block !important;
+    }
+
+    .logIn__leftSide__form  {
+        width: 80%;
+        margin-top: 0px !important;
+        overflow: hidden;
+    }
+
+    .logIn__leftSide__form__data__block__input input {
+        width: 100%;
     }
 }
