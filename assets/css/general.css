@@ -457,7 +457,7 @@
     position: fixed;
     background-color:var(--color-primary);
     top: 50px;
-    left: -350px;
+    left: -100%;
     bottom: 0;
     width: 70%;
     z-index: 2;
