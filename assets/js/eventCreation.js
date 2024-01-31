@@ -26,13 +26,15 @@ for(let i =0 ; i< filter__selection__checker.length ; i++) {
 
 document.querySelector(".filter__clearAll__btn").addEventListener('click',()=>{
     for(let j =0 ; j< filter__selection__checker.length ; j++){
-        filter__selection__checker[j].parentElement.classList.remove("checked");
+        if(filter__selection__checker[j].parentElement.classList.contains("checked")){
+            filter__selection__checker[j].parentElement.classList.remove("checked");
             filter__selection__checker[j].innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                                         <path d="M22.1667 3.5C23.4553 3.5 24.5 4.54467 24.5 5.83333V22.1667C24.5 23.4553 23.4553 24.5 22.1667 24.5H5.83333C4.54467 24.5 3.5 23.4553 3.5 22.1667V5.83333C3.5 4.54467 4.54467 3.5 5.83333 3.5H22.1667Z" stroke="#6B6C6C" stroke-width="1.75"/>
                                     </svg>
             `
-            console.log("hi");
+        }
+        
     }
 })
 
