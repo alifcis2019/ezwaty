@@ -284,6 +284,7 @@
     line-height: 150%;
     border: none;
     outline: none;
+    background-color: transparent;
     /* 21px */
 }
 
@@ -570,4 +571,14 @@ input[type='date']::-webkit-calendar-picker-indicator {
     .select__hall__pagination {
         overflow-x: scroll;
     }
+
+    .select__hall__pagination ::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .select__hall__pagination  {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
 }

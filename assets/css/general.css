@@ -457,6 +457,7 @@
     /* display: none; */
     position: fixed;
     background-color:var(--color-primary);
+    overflow-y: scroll;
     top: 50px;
     left: -100%;
     bottom: 0;
@@ -464,6 +465,16 @@
     z-index: 1100 !important;
     transition: .5s;
 }
+
+.navbarThree__subMenu ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .navbarThree__subMenu  {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 .navbarClose {
     top: 5%;
