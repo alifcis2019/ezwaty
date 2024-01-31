@@ -360,6 +360,7 @@
     line-height: 150%;
     /* 24px */
     letter-spacing: -0.32px;
+    cursor: pointer;
 }
 
 @media (max-width:1024px) and (min-width:884px) {
@@ -589,6 +590,12 @@
 
 @media (max-width:991px) {
     .menu__add__newCard {
-        width: 60%;
+        width: 80%;
+    }
+}
+
+@media (max-width:360px) {
+    .checkOut button {
+        font-size: 14px;
     }
 }

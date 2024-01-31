@@ -461,7 +461,7 @@
     left: -100%;
     bottom: 0;
     width: 70%;
-    z-index: 2;
+    z-index: 1100 !important;
     transition: .5s;
 }
 
@@ -542,11 +542,6 @@
     .navbarThree__subMenu {
         padding-block: 10px;
     }
-
-    .navBarThree__links ul li {
-        padding-block: 5px;
-    }
-
 }
 
 .loggedIn__dashboard {

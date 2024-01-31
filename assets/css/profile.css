@@ -146,11 +146,14 @@ body {
 
 .profile__general__box input {
     /* Paragraph/01/Regular */
-    font-family: Inter;
+    font-family: "Inter";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    background-color: transparent;
+    border: none;
+    outline: none;
     /* 21px */
 }
 
@@ -163,6 +166,24 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    flex: 1 0 0;
+}
+
+input[type='date'] {
+    flex: 1 0 0;
 }
 
 .profile__general__box p {
@@ -466,6 +487,8 @@ input[type="number"] {
 .delete__textArea input {
     border: none !important;
     padding-block: 0;
+    border: none;
+    outline: none;
 }
 
 .delete__back__btn,
@@ -672,12 +695,28 @@ input[type="number"] {
     .profile__leftSide {
         display: none;
         position: fixed !important;
-        top: 118px;
+        overflow-y: scroll;
+        top: 125px;
         left: 0;
         bottom: 0;
         z-index: 1000;
-        width: 350px;
+        width: 60%;
         background-color: whitesmoke;
+        box-shadow: 10px 10px 15px rgb(224, 221, 221);
+    }
+
+    .menu,
+    .edit__card__menu__block,
+    .delete__card__menu__block {
+        width: 60%
+    }
+
+    .cards_block {
+        gap: 10px !important;
+        flex-wrap: nowrap !important;
+    }
+    .profile__rightSide {
+        margin-top: 60px;
     }
 
     .popup {
@@ -690,3 +729,28 @@ input[type="number"] {
         visibility: visible !important;
     }
 }
+
+@media (max-width: 767px) {
+    .profile__leftSide {
+        width: 90%;
+    }
+
+    .profile__rightSide {
+        margin: auto;
+        width: 95%;
+        padding: 0 !important;
+        margin-block: 90px;
+    }
+
+    .cards_block {
+        gap: 20px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .menu,
+    .edit__card__menu__block,
+    .delete__card__menu__block {
+        width: 90%
+    }
+}
+

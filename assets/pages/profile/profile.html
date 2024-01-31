@@ -35,7 +35,7 @@
         <!-- first Navbar -->
         <nav class=" navbar navbar-expand-md navbar-light px-5 d-flex align-items-center justify-content-between">
             <div class="logo">
-                <a class="navbar-brand p-0" href="#">Ezwaty</a>
+                <a class="navbar-brand p-0" href="/index.html">Ezwaty</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -152,7 +152,7 @@
                         </section>
                         <section class="CeateAccount">
                             <div>
-                                <a href="/assets/pages/createAccount.html"
+                                <a href="/assets/pages/signup/createAccount.html"
                                     class="loggedIn__dashboard d-flex align-items-start justify-content-between">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -173,7 +173,7 @@
                                 </a>
                             </div>
                             <div class="">
-                                <a href="/assets/pages/logIn.html"
+                                <a href="/assets/pages/signup/logIn.html"
                                     class="loggedIn__logOut d-flex align-items-center justify-content-between">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -209,16 +209,17 @@
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact US</a></li>
             </ul>
-            <div class="secondNavButton d-flex align-items-center justify-content-center">
+            <a href="/assets/pages/event_creation/27.html" class="secondNavButton d-flex align-items-center justify-content-center">
                 Create Event
-            </div>
+            </a>
         </div>
     </header>
     <!-- End Header -->
+    <div class="px-5 popup d-none position-absolute">
+        <i class="fa-solid fa-bars  fs-1"></i>
+    </div>
     <section class="profile d-flex align-items-start ">
-        <div class="px-5 popup d-none col-1">
-            <i class="fa-solid fa-bars  fs-1"></i>
-        </div>
+        
         <div class="profile__leftSide px-5 col-md-4 position-relative">
             <div class="profile__leftSide__box d-flex flex-column w-75" style="gap: 32px;">
                 <div class="profile__leftSide__box__info d-flex flex-column align-items-center" style="gap: 16px;">
@@ -339,7 +340,7 @@
                 <i class="fa-solid fa-xmark fs-2"></i>
             </div>
         </div>
-        <div class="profile__rightSide px-5 col-lg-8 col-sm-11">
+        <div class="profile__rightSide px-5 col-lg-8 col-sm-12">
             <!-- account info details -->
             <div class="account__info__details right_side_details d-flex flex-column" style="gap: 32px;">
                 <div class="d-flex flex-column" style="gap: 16px;">
@@ -404,9 +405,9 @@
                     </div>
                     <div class="d-flex flex-column" style="gap: 12px;">
                         <p class="account__info__details__header">Birthdate</p>
-                        <div class="profile__general__box d-flex align-items-center justify-content-start"
+                        <div class="profile__general__box position-relative d-flex align-items-center justify-content-start"
                             style="gap: 10px;">
-                            <input type="" disabled class="border-0" placeholder="19/03/1999" style="flex: 1 1 0;">
+                            <input type="date"  class="border-0 position-relative" placeholder="19/03/1999" style="flex: 1 1 0;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
                                 <path
@@ -1268,7 +1269,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="userLogin position-relative">
-                    <a href="assets/pages/signup/logIn.html">
+                    <a href="/assets/pages/signup/logIn.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
                             <path
                                 d="M15.3808 28.5635C22.3195 28.5635 27.9443 22.9386 27.9443 16C27.9443 9.06138 22.3195 3.43652 15.3808 3.43652C8.44224 3.43652 2.81738 9.06138 2.81738 16C2.81738 22.9386 8.44224 28.5635 15.3808 28.5635Z"
