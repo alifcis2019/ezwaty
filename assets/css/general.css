@@ -397,6 +397,7 @@
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
     padding-inline: 5px;
     transition: all .5s;
     box-shadow: 10px 10px 15px rgba(229, 224, 224, 0.2);
