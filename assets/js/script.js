@@ -25,14 +25,12 @@
   }
 
     // accordion Handle
-
     const accordionListText = document.querySelectorAll(".accordion__text")
     accordionListText.forEach(e=>{
       e.parentElement.parentElement.children[0].children[1].children[0].style.display="none";
       e.parentElement.parentElement.children[0].children[1].children[1].style.display="block";
       e.style.display="none";
     })
-
     accordionListText[0].style.display = "block"
     accordionListText[0].parentElement.parentElement.children[0].children[1].children[1].style.display="none";
     accordionListText[0].parentElement.parentElement.children[0].children[1].children[0].style.display="block";

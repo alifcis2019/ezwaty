@@ -393,14 +393,10 @@
                         <p class="account__info__details__header">Gender</p>
                         <div class="profile__general__box d-flex align-items-center justify-content-start"
                             style="gap: 10px;">
-                            <input type="" disabled class="border-0" placeholder="Male" style="flex: 1 1 0;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
-                                    stroke="#090A0A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            <select class="form-select rounded-0" aria-label="Default select example .form-select-lg">
+                                <option selected>Male</option>
+                                <option value="1">Female</option>
+                            </select>
                         </div>
                     </div>
                     <div class="d-flex flex-column" style="gap: 12px;">
@@ -597,7 +593,7 @@
             </div>
             <div class=" right_side_details favourite__cards__details d-none d-flex flex-column" style="gap: 32px;">
                 <div class="favourite_card__container d-flex w-100 flex-wrap" style="gap: 20px;">
-                    <div class="favourite__card d-flex flex-column" style="gap: 16px;">
+                    <div class="favourite__card d-flex flex-column position-relative" style="gap: 16px;">
                         <img src="/assets/images/home/discover hall.png" class="w-100" alt="">
                         <div class="d-flex flex-column" style="gap: 16px; padding: 0px 10px 10px 10px;">
                             <div class="d-flex flex-column align-items-start" style="gap: 12px;">
@@ -651,8 +647,13 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="favourite__card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.8579 3.74469C14.8662 1.60383 12.0001 4.7597 12.0001 4.7597C12.0001 4.7597 9.1338 1.60382 5.1421 3.74468C0.307392 6.33768 -0.0397787 16.492 12.0001 21C24.0399 16.492 23.6926 6.33769 18.8579 3.74469Z" fill="#D61C2A" stroke="#D61C2A" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="favourite__card d-flex flex-column" style="gap: 16px;">
+                    <div class="favourite__card d-flex flex-column position-relative" style="gap: 16px;">
                         <img src="/assets/images/home/discover hall.png" class="w-100" alt="">
                         <div class="d-flex flex-column" style="gap: 16px; padding: 0px 10px 10px 10px;">
                             <div class="d-flex flex-column align-items-start" style="gap: 12px;">
@@ -706,8 +707,13 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="favourite__card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.8579 3.74469C14.8662 1.60383 12.0001 4.7597 12.0001 4.7597C12.0001 4.7597 9.1338 1.60382 5.1421 3.74468C0.307392 6.33768 -0.0397787 16.492 12.0001 21C24.0399 16.492 23.6926 6.33769 18.8579 3.74469Z" fill="#D61C2A" stroke="#D61C2A" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="favourite__card d-flex flex-column" style="gap: 16px;">
+                    <div class="favourite__card d-flex flex-column position-relative" style="gap: 16px;">
                         <img src="/assets/images/home/discover hall.png" class="w-100" alt="">
                         <div class="d-flex flex-column" style="gap: 16px; padding: 0px 10px 10px 10px;">
                             <div class="d-flex flex-column align-items-start" style="gap: 12px;">
@@ -761,8 +767,13 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="favourite__card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.8579 3.74469C14.8662 1.60383 12.0001 4.7597 12.0001 4.7597C12.0001 4.7597 9.1338 1.60382 5.1421 3.74468C0.307392 6.33768 -0.0397787 16.492 12.0001 21C24.0399 16.492 23.6926 6.33769 18.8579 3.74469Z" fill="#D61C2A" stroke="#D61C2A" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="favourite__card d-flex flex-column" style="gap: 16px;">
+                    <div class="favourite__card d-flex flex-column position-relative" style="gap: 16px;">
                         <img src="/assets/images/home/discover hall.png" class="w-100" alt="">
                         <div class="d-flex flex-column" style="gap: 16px; padding: 0px 10px 10px 10px;">
                             <div class="d-flex flex-column align-items-start" style="gap: 12px;">
@@ -815,6 +826,11 @@
                                     <p class="m-0">Book</p>
                                 </button>
                             </div>
+                        </div>
+                        <div class="favourite__card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.8579 3.74469C14.8662 1.60383 12.0001 4.7597 12.0001 4.7597C12.0001 4.7597 9.1338 1.60382 5.1421 3.74468C0.307392 6.33768 -0.0397787 16.492 12.0001 21C24.0399 16.492 23.6926 6.33769 18.8579 3.74469Z" fill="#D61C2A" stroke="#D61C2A" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -867,13 +883,8 @@
                         <p class="account__info__details__header">Card Label</p>
                         <input type="text" placeholder="Enter a desired Name for the card...">
                     </div>
-                    <div class="d-flex align-items-start w-100" style="gap: 8px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M19 3C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19Z"
-                                stroke="#6B6C6C" stroke-width="1.5" />
-                            <path d="M8 12.5L10.5 15L16 9" stroke="white" stroke-width="1.5" />
-                        </svg>
+                    <div class="d-flex align-items-center w-100" style="gap: 8px;">
+                        <input type="checkbox">
                         <div class="save__later">
                             Save to my cards for later
                         </div>

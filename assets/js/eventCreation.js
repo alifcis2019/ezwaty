@@ -36,13 +36,14 @@ document.querySelector(".filter__clearAll__btn").addEventListener('click',()=>{
         }
         
     }
+    var clist = document.getElementsByTagName("input");
+    for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
 })
 
 // dropdown filter part
 
 let filter__part__dropdown = document.querySelectorAll(".filter__part__dropdown")
 let filter__part__selection__container = document.querySelectorAll(".filter__part__selection__container")
-console.log(filter__part__selection__container);
 for(let i =0 ; i< filter__part__dropdown.length ; i++) {
     filter__part__dropdown[i].addEventListener('click',()=>{
         if(!filter__part__selection__container[i].classList.contains("filter__collapsed")) {
@@ -88,3 +89,32 @@ for(let s = 0 ; s < select__hall__btn.length ; s++){
         }
     })
 }
+
+
+
+// hall sorting
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+          txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "flex";
+          } else {
+          a[i].style.display = "none";
+          }
+      }
+  }
+
+
+

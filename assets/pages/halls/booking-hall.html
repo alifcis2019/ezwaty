@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hall Booking</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- file style -->
+    <link rel="stylesheet" href="/assets/css/general.css">
+    <link rel="stylesheet" href="/assets/css/eventCreation.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="">
+        <!-- first Navbar -->
+        <nav class=" navbar navbar-expand-md navbar-light px-5 d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a class="navbar-brand p-0" href="#">Ezwaty</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!-- search navbar -->
+            <div class="searchBlock  d-flex align-items-center justify-content-between">
+                <!-- search icon -->
+                <div class="navbarSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g opacity="0.8">
+                            <path d="M17.5 17.5L22 22" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                            <path
+                                d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                                stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </div>
+                <!-- search input -->
+                <input type="text" placeholder="search..." class="">
+                <!-- filter icon -->
+                <div class="navbarFilter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 7H6" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M3 17H9" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M18 17H21" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M15 7H21" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M12 4H6V10H12V4Z" stroke="white" stroke-width="1.5" />
+                        <path d="M18 14H12V20H18V14Z" stroke="white" stroke-width="1.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="user d-flex align-items-center justify-content-between">
+                <div class="userLanguage d-flex align-items-center justify-content-between">
+                    <img src="/assets/images/general/language.jpg" alt="">
+                    <!-- dropDown Languages -->
+                    <div class="userLanguage__selection d-flex align-items-center">
+                        <p class="userLanguage__selection__language">English</p>
+                        <div class="userLanguage__selection__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="userSystem d-flex align-items-center justify-content-between">
+                    <!-- user notification -->
+                    <div class="userNotification">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M23.6715 15.3606H24.6137V15.3359L24.6125 15.3111L23.6715 15.3606ZM23.6715 18.5128H22.7292V18.8633L22.9582 19.1285L23.6715 18.5128ZM26.3832 24.7945V25.7368H27.3254V24.7945H26.3832ZM26.3832 21.6537H27.3254C27.3254 21.4275 27.2441 21.2091 27.0964 21.0379L26.3832 21.6537ZM6.48058 15.3606L5.53961 15.3111L5.53832 15.3359V15.3606H6.48058ZM6.48058 18.5128L7.19381 19.1285L7.42284 18.8633V18.5128H6.48058ZM3.76892 24.7945H2.82666V25.7368H3.76892V24.7945ZM3.76892 21.6537L3.05569 21.0379C2.90795 21.2091 2.82666 21.4275 2.82666 21.6537H3.76892ZM15.076 8.14795C19.1528 8.14795 22.5162 11.3391 22.7306 15.4101L24.6125 15.3111C24.3455 10.2391 20.1551 6.26343 15.076 6.26343V8.14795ZM22.7292 15.3606V18.5128H24.6137V15.3606H22.7292ZM22.9582 19.1285L25.6699 22.2694L27.0964 21.0379L24.3847 17.8971L22.9582 19.1285ZM25.4409 21.6537V24.7945H27.3254V21.6537H25.4409ZM15.076 6.26343C9.99698 6.26343 5.80658 10.2391 5.53961 15.3111L7.42153 15.4101C7.6358 11.3391 10.9993 8.14795 15.076 8.14795V6.26343ZM5.53832 15.3606V18.5128H7.42284V15.3606H5.53832ZM3.76892 25.7368H26.3832V23.8523H3.76892V25.7368ZM5.76735 17.8971L3.05569 21.0379L4.48215 22.2694L7.19381 19.1285L5.76735 17.8971ZM2.82666 21.6537V24.7945H4.71118V21.6537H2.82666Z"
+                                fill="white" />
+                            <path
+                                d="M13.1917 5.32104C13.1917 6.36184 14.0354 7.20556 15.0762 7.20556C16.1169 7.20556 16.9607 6.36184 16.9607 5.32104C16.9607 4.28025 16.1169 3.43652 15.0762 3.43652C14.0354 3.43652 13.1917 4.28025 13.1917 5.32104Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M18.8452 24.7944C18.8452 26.8761 17.1578 28.5635 15.0762 28.5635C12.9945 28.5635 11.3071 26.8761 11.3071 24.7944"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M16.4544 10.1392C17.0465 13.1818 19.9931 15.1682 23.0355 14.5761C26.078 13.9841 28.0646 11.0376 27.4725 7.99505C26.8804 4.95248 23.9338 2.96603 20.8914 3.5581C17.8489 4.15016 15.8623 7.09662 16.4544 10.1392Z"
+                                fill="#D61C2A" stroke="#003A61" stroke-width="1.62058" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="line"></div>
+                    <div class="userWishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M23.8432 5.62846C18.8282 2.9388 15.2274 6.90366 15.2274 6.90366C15.2274 6.90366 11.6263 2.93879 6.61139 5.62845C0.537316 8.88615 0.101149 21.6435 15.2274 27.3071C30.3535 21.6435 29.9172 8.88617 23.8432 5.62846Z"
+                                stroke="white" stroke-width="1.88452" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="line"></div>
+                    <div class="userLogin position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M15.3808 28.5635C22.3195 28.5635 27.9443 22.9386 27.9443 16C27.9443 9.06138 22.3195 3.43652 15.3808 3.43652C8.44224 3.43652 2.81738 9.06138 2.81738 16C2.81738 22.9386 8.44224 28.5635 15.3808 28.5635Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M9.72729 22.2817C12.6567 19.2135 18.0735 19.069 21.0344 22.2817M18.5156 12.8591C18.5156 14.5938 17.1073 16 15.3702 16C13.6332 16 12.2249 14.5938 12.2249 12.8591C12.2249 11.1245 13.6332 9.71826 15.3702 9.71826C17.1073 9.71826 18.5156 11.1245 18.5156 12.8591Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                        </svg>
+                        <section class="loggedIn">
+                            <div class="loggedIn__dashboard d-flex align-items-start justify-content-between">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M3 22H21C21 17.5817 16.9706 14 12 14C7.02944 14 3 17.5817 3 22Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                </svg>
+                                <p class="m-0">My Dashboard</p>
+                                <svg class="align-self-end" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                                        stroke="#818383" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="loggedIn__logOut d-flex align-items-center justify-content-between">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M10 3L4 6V18L10 21" stroke="#424242" stroke-width="1.5" />
+                                    <path d="M20 12H10M20 12L16.9998 9M20 12L16.9998 15" stroke="#424242"
+                                        stroke-width="1.5" />
+                                </svg>
+                                <p class="m-0">Log out</p>
+                            </div>
+                        </section>
+                        <section class="CeateAccount">
+                            <div>
+                                <a href="/assets/pages/createAccount.html"
+                                    class="loggedIn__dashboard d-flex align-items-start justify-content-between">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path d="M3 22H21C21 17.5817 16.9706 14 12 14C7.02944 14 3 17.5817 3 22Z"
+                                            stroke="#424242" stroke-width="1.5" />
+                                        <path
+                                            d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                                            stroke="#424242" stroke-width="1.5" />
+                                    </svg>
+                                    <p class="m-0">Create Account</p>
+                                    <svg class="align-self-end" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                                            stroke="#818383" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="">
+                                <a href="/assets/pages/logIn.html"
+                                    class="loggedIn__logOut d-flex align-items-center justify-content-between">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path d="M10 3L4 6V18L10 21" stroke="#424242" stroke-width="1.5" />
+                                        <path d="M20 12H10M20 12L16.9998 9M20 12L16.9998 15" stroke="#424242"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                    <p class="m-0">Sign in</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                                            stroke="#818383" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- second Navbar -->
+        <div class="secondNav px-5 d-flex align-items-center justify-content-between">
+            <ul class="d-flex align-items-center justify-content-between secondNavList">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Halls</a></li>
+                <li><a href="">My Events</a></li>
+                <li><a href="">Invites</a></li>
+                <li><a href="">Cards</a></li>
+                <li><a href="">Events Services</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact US</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- start event creation -->
+    <section class="eventCreation mb-5">
+        <div class="eventCreation__upperPart d-flex flex-column" style="gap: 16px;">
+        </div>
+        <div class="hallBooking d-flex flex-column align-items-start justify-content-start align-self-stretch mt-5" style="gap: 16px;">
+            <div class="hallBooking__dates d-flex justify-content-start align-items-center align-self-stretch" style="gap: 16px;">
+                <div class="hallBooking__dates__part d-flex flex-column align-items-start" style="gap: 12px;">
+                    <p class="hallBooking__dates__part__header m-0">Available Dates</p>
+                    <div class="hallBooking__dates__part__input d-flex position-relative">
+                        <input type="date" name="" id="" class="position-relative" placeholder="DD:MM:YYYY">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M12.3285 13.5H12.3375M12.3285 17.5H12.3375M16.324 13.5H16.333M8.33301 13.5H8.34198M8.33301 17.5H8.34198" stroke="#090A0A" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                <path d="M17.833 2V6M6.83301 2V6" stroke="#090A0A" stroke-width="1.5" stroke-linejoin="round"/>
+                                <path d="M21.333 4H3.33301V22H21.333V4Z" stroke="#090A0A" stroke-width="1.5" stroke-linejoin="round"/>
+                                <path d="M3.33301 9H21.333" stroke="#090A0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="hallBooking__dates__part d-flex flex-column align-items-start" style="gap: 12px;">
+                    <p class="hallBooking__dates__part__header m-0">Desired Time</p>
+                    <div class="hallBooking__dates__part__input d-flex position-relative">
+                        <input type="text" name="" id="" placeholder="EX: 4:00 PM - 8:00 PM">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M6.66602 9L11.9589 14.2929C12.2922 14.6262 12.4589 14.7929 12.666 14.7929C12.8731 14.7929 13.0398 14.6262 13.3731 14.2929L18.666 9" stroke="#090A0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hallBooking__dates__part d-flex flex-column align-items-start" style="gap: 12px;">
+                    <p class="hallBooking__dates__part__header m-0">Number of  Invitees</p>
+                    <div class="hallBooking__dates__part__input">
+                        <input type="number" name="" id="" placeholder="EX: 1,500 Person">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-start" style="gap: 12px;">
+                <p class="hallBooking__dates__part__header">Preferences</p>
+                <div class="prefrences d-flex align-items-center" style="gap: 12px;">
+                    <div class="prefrence__box prefrence__box__active">
+                        <p>Hall For Men's Only</p>
+                        <div class="prefrence__box__radio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" fill="#003A61" stroke="#003A61" stroke-width="1.5"/>
+                                <path d="M8 12.5L10.5 15L16 9" stroke="white" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="prefrence__box">
+                        <p>Hall For Women's Only</p>
+                        <div class="prefrence__box__radio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#6B6C6C" stroke-width="1.5"/>
+                                <path d="M8 12.5L10.5 15L16 9" stroke="white" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="prefrence__box">
+                        <p>Hall For Men's &Hall For Women’s</p>
+                        <div class="prefrence__box__radio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#6B6C6C" stroke-width="1.5"/>
+                                <path d="M8 12.5L10.5 15L16 9" stroke="white" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="additional__features d-flex flex-column align-items-start w-100" style="gap: 12px;">
+                <p class="hallBooking__dates__part__header">Additional Features</p>
+                <div class="d-flex flex-column align-items-start w-100" style="gap: 12px;">
+                    <div class="additional__features__box d-flex justify-content-between w-100">
+                        <div class="additional__features__box__left d-flex flex-column w-100" style="gap: 8px;">
+                            <div>
+                                <p class="m-0">Open Buffet For 100 Invitee</p>
+                                <p class="m-0">add 10 more with 10 QAR</p>
+                            </div>
+                            <div class="additional__features__box__left__price additional__features__box__left__price__blue">
+                                <p class="m-0">100 QAR</p>
+                            </div>
+                        </div>
+                        <button class="align-self-end">Add</button>
+                    </div>
+                    <div class="additional__features__box d-flex justify-content-between w-100">
+                        <div class="additional__features__box__left d-flex flex-column w-100" style="gap: 8px;">
+                            <div>
+                                <p class="m-0">Light System</p>
+                            </div>
+                            <div class="additional__features__box__left__price additional__features__box__left__price__green">
+                                <p class="m-0">FREE</p>
+                            </div>
+                        </div>
+                        <button class="align-self-end">Add</button>
+                    </div>
+                    <div class="additional__features__box d-flex justify-content-between w-100">
+                        <div class="additional__features__box__left d-flex flex-column w-100" style="gap: 8px;">
+                            <div>
+                                <p class="m-0">Feature Name</p>
+                            </div>
+                            <div class="additional__features__box__left__price additional__features__box__left__price__green">
+                                <p class="m-0">FREE</p>
+                            </div>
+                        </div>
+                        <button class="align-self-end">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start footer -->
+    <footer class=" d-flex flex-column">
+        <div class="footer__upper d-flex align-items-start justify-content-between w-100">
+            <div class="text-light footer__upper__ezawty">
+                <p>Ezwaty</p>
+                <p>Ezwaty is leading the charge in transforming India’s vast, unorganized grocery landscape through
+                    cutting-edge technology and innovation.Blanket is India’s largest and most convenient hyper-local
+                    delivery company.</p>
+            </div>
+            <div
+                class="text-light footer__upper__quickLinks d-flex align-items-start justify-content-between flex-column">
+                <p class="footer__linksTitle">Quick Links</p>
+                <div class="footerLinks d-flex flex-column align-items-start justify-content-between">
+                    <a href="">Halls</a><a href="">My Events</a><a href="">Invites</a><a href="">Cards</a><a
+                        href="">Event Services</a>
+                </div>
+            </div>
+            <div class="footer__upper__help">
+                <p class="footer__linksTitle">Help</p>
+                <div class="footerLinks d-flex flex-column align-items-start justify-content-between">
+                    <a href="">About us</a><a href="">FAQ</a><a href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer__upper__legal">
+                <p class="footer__linksTitle">Legal</p>
+                <div class="footerLinks d-flex flex-column align-items-start justify-content-between">
+                    <a href="">Privacy Policy</a><a href="">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer__upper__download d-flex flex-column">
+                <p class="footer__linksTitle">Download App</p>
+                <div class="d-flex flex-column align-items-start justify-content-between">
+                    <div class="footer__upper__download__part2 d-flex flex-column">
+                        <div class="footer__download__box">
+                            <img src="/assets/images/general/Mobile app store badge.png" alt="">
+                        </div>
+                        <div class="footer__download__box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="121" height="40" viewBox="0 0 121 40"
+                                fill="none">
+                                <rect x="0.228516" width="120" height="40" fill="#0C0D10" />
+                                <rect x="0.728516" y="0.5" width="119" height="39" stroke="white"
+                                    stroke-opacity="0.32" />
+                                <path
+                                    d="M81.7544 19.2013V21.4924H80.3184V22.9948H81.7544V28.0998C81.7544 29.8429 82.543 30.5402 84.5269 30.5402C84.8755 30.5402 85.2076 30.4987 85.4981 30.4489V28.9631C85.2491 28.988 85.0914 29.0046 84.8174 29.0046C83.9292 29.0046 83.5391 28.5895 83.5391 27.6432V22.9948H85.4981V21.4924H83.5391V19.2013H81.7544Z"
+                                    fill="white" />
+                                <path
+                                    d="M90.5519 30.6647C93.1916 30.6647 94.8102 28.8967 94.8102 25.9665C94.8102 23.0529 93.1833 21.2765 90.5519 21.2765C87.9123 21.2765 86.2853 23.0529 86.2853 25.9665C86.2853 28.8967 87.904 30.6647 90.5519 30.6647ZM90.5519 29.0793C88.9997 29.0793 88.1281 27.9421 88.1281 25.9665C88.1281 24.0075 88.9997 22.862 90.5519 22.862C92.0959 22.862 92.9758 24.0075 92.9758 25.9665C92.9758 27.9338 92.0959 29.0793 90.5519 29.0793Z"
+                                    fill="white" />
+                                <path
+                                    d="M96.1951 30.4904H97.9798V25.153C97.9798 23.883 98.9344 23.028 100.287 23.028C100.603 23.028 101.134 23.0861 101.284 23.1359V21.3762C101.093 21.3263 100.752 21.3014 100.487 21.3014C99.3079 21.3014 98.3035 21.9489 98.0462 22.8371H97.9134V21.4509H96.1951V30.4904Z"
+                                    fill="white" />
+                                <path
+                                    d="M105.715 22.7956C107.035 22.7956 107.898 23.717 107.939 25.1364H103.374C103.474 23.7253 104.395 22.7956 105.715 22.7956ZM107.931 28.05C107.599 28.7555 106.86 29.1457 105.781 29.1457C104.353 29.1457 103.432 28.1413 103.374 26.5558V26.4562H109.757V25.8337C109.757 22.9948 108.238 21.2765 105.723 21.2765C103.175 21.2765 101.556 23.111 101.556 25.9997C101.556 28.8884 103.142 30.6647 105.731 30.6647C107.798 30.6647 109.243 29.6686 109.649 28.05H107.931Z"
+                                    fill="white" />
+                                <path
+                                    d="M70.0509 27.1522C70.1885 29.372 72.0383 30.7915 74.7914 30.7915C77.7338 30.7915 79.575 29.3031 79.575 26.9286C79.575 25.0616 78.5253 24.0292 75.9787 23.4355L74.6107 23.1C72.9933 22.7214 72.3394 22.2138 72.3394 21.3277C72.3394 20.2092 73.3546 19.4779 74.8774 19.4779C76.3228 19.4779 77.3208 20.192 77.5015 21.3363H79.3771C79.2652 19.2456 77.4241 17.7744 74.9032 17.7744C72.1931 17.7744 70.3864 19.2456 70.3864 21.4567C70.3864 23.2807 71.4102 24.3647 73.6557 24.8895L75.256 25.2767C76.8993 25.6638 77.622 26.2317 77.622 27.1781C77.622 28.2793 76.4863 29.0794 74.9377 29.0794C73.2772 29.0794 72.1243 28.3309 71.9608 27.1522H70.0509Z"
+                                    fill="white" />
+                                <path
+                                    d="M51.5635 21.3014C50.335 21.3014 49.2725 21.9157 48.7247 22.945H48.5918V21.4509H46.8736V33.4953H48.6583V29.1208H48.7994C49.2725 30.0754 50.2935 30.6398 51.5801 30.6398C53.8628 30.6398 55.3155 28.8386 55.3155 25.9665C55.3155 23.0944 53.8628 21.3014 51.5635 21.3014ZM51.0572 29.0378C49.563 29.0378 48.625 27.8591 48.625 25.9748C48.625 24.0822 49.563 22.9035 51.0655 22.9035C52.5762 22.9035 53.481 24.0573 53.481 25.9665C53.481 27.884 52.5762 29.0378 51.0572 29.0378Z"
+                                    fill="white" />
+                                <path
+                                    d="M61.5603 21.3014C60.3318 21.3014 59.2693 21.9157 58.7215 22.945H58.5886V21.4509H56.8704V33.4953H58.655V29.1208H58.7962C59.2693 30.0754 60.2903 30.6398 61.5769 30.6398C63.8596 30.6398 65.3123 28.8386 65.3123 25.9665C65.3123 23.0944 63.8596 21.3014 61.5603 21.3014ZM61.054 29.0378C59.5598 29.0378 58.6218 27.8591 58.6218 25.9748C58.6218 24.0822 59.5598 22.9035 61.0623 22.9035C62.573 22.9035 63.4778 24.0573 63.4778 25.9665C63.4778 27.884 62.573 29.0378 61.054 29.0378Z"
+                                    fill="white" />
+                                <path
+                                    d="M43.6716 30.4904H45.7192L41.2368 18.0755H39.1633L34.6809 30.4904H36.6597L37.804 27.1953H42.5359L43.6716 30.4904ZM40.1011 20.3297H40.2474L42.0455 25.5778H38.2944L40.1011 20.3297Z"
+                                    fill="white" />
+                                <path
+                                    d="M35.8796 8.71069V14.6997H38.042C39.8267 14.6997 40.8601 13.5999 40.8601 11.6865C40.8601 9.80225 39.8184 8.71069 38.042 8.71069H35.8796ZM36.8093 9.55737H37.9382C39.1792 9.55737 39.9138 10.3459 39.9138 11.699C39.9138 13.0728 39.1917 13.853 37.9382 13.853H36.8093V9.55737Z"
+                                    fill="white" />
+                                <path
+                                    d="M44.0252 14.7869C45.345 14.7869 46.1543 13.9028 46.1543 12.4377C46.1543 10.981 45.3409 10.0928 44.0252 10.0928C42.7054 10.0928 41.8919 10.981 41.8919 12.4377C41.8919 13.9028 42.7012 14.7869 44.0252 14.7869ZM44.0252 13.9941C43.2491 13.9941 42.8133 13.4255 42.8133 12.4377C42.8133 11.4583 43.2491 10.8855 44.0252 10.8855C44.7972 10.8855 45.2371 11.4583 45.2371 12.4377C45.2371 13.4214 44.7972 13.9941 44.0252 13.9941Z"
+                                    fill="white" />
+                                <path
+                                    d="M53.0465 10.1799H52.1542L51.349 13.6289H51.2784L50.3487 10.1799H49.4937L48.5641 13.6289H48.4977L47.6883 10.1799H46.7835L48.0287 14.6997H48.9459L49.8756 11.3711H49.9461L50.88 14.6997H51.8055L53.0465 10.1799Z"
+                                    fill="white" />
+                                <path
+                                    d="M54.0741 14.6997H54.9665V12.0559C54.9665 11.3503 55.3856 10.9104 56.0456 10.9104C56.7055 10.9104 57.0209 11.2715 57.0209 11.9978V14.6997H57.9132V11.7737C57.9132 10.6987 57.3571 10.0928 56.3485 10.0928C55.6679 10.0928 55.2196 10.3958 54.9997 10.8979H54.9333V10.1799H54.0741V14.6997Z"
+                                    fill="white" />
+                                <path d="M59.3186 14.6997H60.2109V8.41602H59.3186V14.6997Z" fill="white" />
+                                <path
+                                    d="M63.5669 14.7869C64.8867 14.7869 65.696 13.9028 65.696 12.4377C65.696 10.981 64.8826 10.0928 63.5669 10.0928C62.2471 10.0928 61.4336 10.981 61.4336 12.4377C61.4336 13.9028 62.2429 14.7869 63.5669 14.7869ZM63.5669 13.9941C62.7908 13.9941 62.355 13.4255 62.355 12.4377C62.355 11.4583 62.7908 10.8855 63.5669 10.8855C64.3389 10.8855 64.7788 11.4583 64.7788 12.4377C64.7788 13.4214 64.3389 13.9941 63.5669 13.9941Z"
+                                    fill="white" />
+                                <path
+                                    d="M68.3548 14.0232C67.8692 14.0232 67.5164 13.7866 67.5164 13.3799C67.5164 12.9814 67.7986 12.7698 68.4212 12.7283L69.5252 12.6577V13.0354C69.5252 13.5957 69.0271 14.0232 68.3548 14.0232ZM68.1265 14.7744C68.72 14.7744 69.2139 14.5171 69.4837 14.0647H69.5542V14.6997H70.4134V11.6118C70.4134 10.6572 69.7742 10.0928 68.6412 10.0928C67.616 10.0928 66.8855 10.5908 66.7942 11.3669H67.6575C67.7571 11.0474 68.1016 10.8647 68.5997 10.8647C69.2098 10.8647 69.5252 11.1345 69.5252 11.6118V12.002L68.3008 12.0725C67.2259 12.1389 66.6199 12.6079 66.6199 13.4214C66.6199 14.2473 67.2549 14.7744 68.1265 14.7744Z"
+                                    fill="white" />
+                                <path
+                                    d="M73.4415 14.7744C74.0641 14.7744 74.5912 14.4797 74.8609 13.9858H74.9315V14.6997H75.7865V8.41602H74.8941V10.8979H74.8277C74.5829 10.3999 74.0599 10.1052 73.4415 10.1052C72.3001 10.1052 71.5655 11.01 71.5655 12.4377C71.5655 13.8696 72.2918 14.7744 73.4415 14.7744ZM73.6947 10.9062C74.4417 10.9062 74.9107 11.4998 74.9107 12.4419C74.9107 13.3882 74.4459 13.9734 73.6947 13.9734C72.9393 13.9734 72.4869 13.3965 72.4869 12.4377C72.4869 11.4873 72.9435 10.9062 73.6947 10.9062Z"
+                                    fill="white" />
+                                <path
+                                    d="M81.5729 14.7869C82.8928 14.7869 83.7021 13.9028 83.7021 12.4377C83.7021 10.981 82.8886 10.0928 81.5729 10.0928C80.2531 10.0928 79.4396 10.981 79.4396 12.4377C79.4396 13.9028 80.249 14.7869 81.5729 14.7869ZM81.5729 13.9941C80.7968 13.9941 80.361 13.4255 80.361 12.4377C80.361 11.4583 80.7968 10.8855 81.5729 10.8855C82.3449 10.8855 82.7849 11.4583 82.7849 12.4377C82.7849 13.4214 82.3449 13.9941 81.5729 13.9941Z"
+                                    fill="white" />
+                                <path
+                                    d="M84.8833 14.6997H85.7756V12.0559C85.7756 11.3503 86.1948 10.9104 86.8547 10.9104C87.5146 10.9104 87.8301 11.2715 87.8301 11.9978V14.6997H88.7224V11.7737C88.7224 10.6987 88.1663 10.0928 87.1577 10.0928C86.4771 10.0928 86.0288 10.3958 85.8088 10.8979H85.7424V10.1799H84.8833V14.6997Z"
+                                    fill="white" />
+                                <path
+                                    d="M92.8321 9.05518V10.2007H92.1141V10.9519H92.8321V13.5044C92.8321 14.376 93.2264 14.7246 94.2184 14.7246C94.3927 14.7246 94.5587 14.7039 94.704 14.679V13.936C94.5794 13.9485 94.5006 13.9568 94.3636 13.9568C93.9195 13.9568 93.7245 13.7493 93.7245 13.2761V10.9519H94.704V10.2007H93.7245V9.05518H92.8321Z"
+                                    fill="white" />
+                                <path
+                                    d="M95.9018 14.6997H96.7941V12.0601C96.7941 11.3752 97.2008 10.9146 97.9313 10.9146C98.5622 10.9146 98.8983 11.2798 98.8983 12.002V14.6997H99.7907V11.782C99.7907 10.707 99.1972 10.0969 98.2343 10.0969C97.5536 10.0969 97.0763 10.3999 96.8563 10.9062H96.7858V8.41602H95.9018V14.6997Z"
+                                    fill="white" />
+                                <path
+                                    d="M103.01 10.8523C103.67 10.8523 104.101 11.313 104.122 12.0227H101.839C101.889 11.3171 102.35 10.8523 103.01 10.8523ZM104.118 13.4795C103.952 13.8323 103.582 14.0273 103.043 14.0273C102.329 14.0273 101.868 13.5251 101.839 12.7324V12.6826H105.031V12.3713C105.031 10.9519 104.271 10.0928 103.014 10.0928C101.74 10.0928 100.93 11.01 100.93 12.4543C100.93 13.8987 101.723 14.7869 103.018 14.7869C104.051 14.7869 104.774 14.2888 104.977 13.4795H104.118Z"
+                                    fill="white" />
+                                <path
+                                    d="M24.9975 20.3011C25.0192 18.6201 25.9219 17.0295 27.3541 16.149C26.4506 14.8587 24.9373 14.0406 23.3629 13.9913C21.6837 13.8151 20.0557 14.9962 19.2 14.9962C18.3277 14.9962 17.0102 14.0088 15.5915 14.038C13.7423 14.0978 12.0183 15.1491 11.1186 16.7659C9.18459 20.1143 10.6272 25.0354 12.4798 27.742C13.4067 29.0673 14.49 30.5478 15.9074 30.4953C17.2945 30.4377 17.8125 29.6108 19.4868 29.6108C21.1456 29.6108 21.6316 30.4953 23.0778 30.4619C24.5662 30.4377 25.5039 29.1306 26.3983 27.7927C27.0643 26.8484 27.5768 25.8047 27.9167 24.7002C26.1676 23.9604 24.9996 22.2002 24.9975 20.3011Z"
+                                    fill="white" />
+                                <path
+                                    d="M22.2658 12.2113C23.0774 11.2371 23.4772 9.98494 23.3804 8.7207C22.1405 8.85092 20.9953 9.44348 20.1728 10.3803C19.3685 11.2956 18.9499 12.5258 19.0291 13.7417C20.2694 13.7545 21.4886 13.178 22.2658 12.2113Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="text-light">
+        <div class="footer__down d-flex justify-content-between align-items-center">
+            <div>
+                <p class="text-light m-0 footerCopyRight">&COPY; 2023 EZWATY - All Rights Reserved, You Deserve The Best
+                    Experience From MSME DesignStudio</p>
+            </div>
+            <div class="footerSocialIcons d-flex ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M5.5 14.2222V10.3333H9.04545V2H19.5V6.44444H13.7727V10.3333H18.5L17 14.2222H13.7727V22H9.04545V14.2222H5.5Z"
+                        stroke="white" stroke-width="1.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M3.5 21L11.0484 13.4516M11.0484 13.4516L3.5 3H8.5L13.9516 10.5484M11.0484 13.4516L16.5 21H21.5L13.9516 10.5484M21.5 3L13.9516 10.5484"
+                        stroke="white" stroke-width="1.5" stroke-linecap="square" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M21.5 3V21H3.5V3H21.5Z" stroke="white" stroke-width="1.5" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M17 12C17 14.4853 14.9853 16.5 12.5 16.5C10.0147 16.5 8 14.4853 8 12C8 9.51472 10.0147 7.5 12.5 7.5C14.9853 7.5 17 9.51472 17 12Z"
+                        stroke="white" stroke-width="1.5" />
+                    <path d="M18.0078 6.5H17.9988" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M2.50002 16.4444L2.19932 15.7574C1.90535 15.886 1.7258 16.1874 1.75265 16.5072C1.7795 16.827 2.00681 17.0942 2.31812 17.1721L2.50002 16.4444ZM5.83335 19.7778L5.10575 19.9597L5.24777 20.5278H5.83335V19.7778ZM12.5 22L12.0315 22.5857C12.3054 22.8048 12.6946 22.8048 12.9685 22.5857L12.5 22ZM22.5 16.4444L22.6819 17.1721C22.9932 17.0942 23.2205 16.827 23.2474 16.5072C23.2742 16.1874 23.0947 15.886 22.8007 15.7574L22.5 16.4444ZM19.1667 19.7778V20.5278H19.7523L19.8943 19.9597L19.1667 19.7778ZM12.5 1.25C9.08997 1.25 6.32558 4.01439 6.32558 7.42444H7.82558C7.82558 4.84282 9.9184 2.75 12.5 2.75V1.25ZM6.32558 7.42444C6.32558 9.82863 6.25621 11.4509 5.72398 12.711C5.2217 13.9002 4.26077 14.8552 2.19932 15.7574L2.80072 17.1315C5.07815 16.1348 6.40501 14.9537 7.10578 13.2946C7.77661 11.7064 7.82558 9.76804 7.82558 7.42444H6.32558ZM2.31812 17.1721C3.41482 17.4462 3.93097 17.6861 4.26136 18.0164C4.59174 18.3468 4.83157 18.863 5.10575 19.9597L6.56096 19.5959C6.27958 18.4704 5.96386 17.5976 5.32202 16.9558C4.68018 16.3139 3.80745 15.9982 2.68192 15.7168L2.31812 17.1721ZM5.83335 20.5278C7.6364 20.5278 9.19255 21.0437 10.3057 21.5675C10.8605 21.8286 11.2996 22.089 11.5971 22.282C11.7456 22.3784 11.8583 22.4575 11.9319 22.5111C11.9687 22.5378 11.9957 22.5581 12.0124 22.5709C12.0208 22.5773 12.0266 22.5818 12.0298 22.5843C12.0314 22.5856 12.0323 22.5863 12.0326 22.5866C12.0325 22.5865 12.0316 22.5858 12.0315 22.5857C12.0314 22.5856 12.0315 22.5857 12.5 22C12.9685 21.4143 12.9683 21.4142 12.9681 21.414C12.968 21.4139 12.9683 21.4142 12.9681 21.414C12.9678 21.4137 12.9669 21.413 12.9664 21.4127C12.9656 21.412 12.9645 21.4112 12.9633 21.4102C12.9609 21.4083 12.9578 21.4059 12.954 21.4029C12.9465 21.397 12.9362 21.389 12.9233 21.3792C12.8975 21.3594 12.8609 21.332 12.8142 21.298C12.7207 21.23 12.586 21.1355 12.4134 21.0236C12.0685 20.7998 11.57 20.5047 10.9443 20.2103C9.69636 19.623 7.9192 19.0278 5.83335 19.0278V20.5278ZM12.5 2.75C15.0816 2.75 17.1744 4.84282 17.1744 7.42444H18.6744C18.6744 4.01439 15.9101 1.25 12.5 1.25V2.75ZM17.1744 7.42444C17.1744 9.76804 17.2234 11.7064 17.8942 13.2946C18.595 14.9537 19.9219 16.1348 22.1993 17.1315L22.8007 15.7574C20.7392 14.8552 19.7783 13.9002 19.276 12.711C18.7438 11.4509 18.6744 9.82863 18.6744 7.42444H17.1744ZM22.3181 15.7168C21.1926 15.9982 20.3198 16.3139 19.678 16.9558C19.0362 17.5976 18.7204 18.4704 18.4391 19.5959L19.8943 19.9597C20.1684 18.863 20.4083 18.3468 20.7387 18.0164C21.069 17.6861 21.5852 17.4462 22.6819 17.1721L22.3181 15.7168ZM19.1667 19.0278C17.0808 19.0278 15.3036 19.623 14.0557 20.2103C13.43 20.5047 12.9315 20.7998 12.5866 21.0236C12.414 21.1355 12.2793 21.23 12.1858 21.298C12.1391 21.332 12.1025 21.3594 12.0767 21.3792C12.0638 21.389 12.0535 21.397 12.046 21.4029C12.0422 21.4059 12.0391 21.4083 12.0367 21.4102C12.0355 21.4112 12.0344 21.412 12.0336 21.4127C12.0331 21.413 12.0327 21.4133 12.0324 21.4136C12.0322 21.4138 12.0325 21.4135 12.0324 21.4136C12.0322 21.4138 12.0315 21.4143 12.5 22C12.9685 22.5857 12.9686 22.5856 12.9685 22.5857C12.9684 22.5858 12.9686 22.5856 12.9685 22.5857C12.9683 22.5858 12.9676 22.5864 12.9675 22.5865C12.9673 22.5866 12.9673 22.5867 12.9675 22.5865C12.9678 22.5862 12.9686 22.5856 12.9702 22.5843C12.9734 22.5818 12.9792 22.5773 12.9876 22.5709C13.0043 22.5581 13.0313 22.5378 13.0681 22.5111C13.1417 22.4575 13.2544 22.3784 13.4029 22.282C13.7004 22.089 14.1395 21.8286 14.6943 21.5675C15.8075 21.0437 17.3636 20.5278 19.1667 20.5278V19.0278Z"
+                        fill="white" />
+                    <path d="M2.5 16.5C6.32356 14.2783 6.32356 11.647 3.45589 8.5" stroke="white" stroke-width="1.5"
+                        stroke-linejoin="round" />
+                    <path d="M22.5 16.5C18.6764 14.2783 18.6764 11.647 21.5441 8.5" stroke="white" stroke-width="1.5"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- start navbar three -->
+    <div class="navBarThree px-5 d-flex justify-content-between flex-column gap-3 shadow-lg">
+        <div class="logo d-flex justify-content-between align-items-center flex-grow-1">
+            <a class="navbar-brand p-0" href="#">Ezwaty</a>
+            <div class="navbarTab bg-transparent outline-0 border-0">
+                <i class="fa-solid fa-bars text-light  fs-2"></i>
+            </div>
+        </div>
+        <!-- <div class="searchBlock d-flex align-items-center justify-content-between w-100">
+                <!-- search icon -->
+        <!-- <div class="navbarSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g opacity="0.8">
+                            <path d="M17.5 17.5L22 22" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                            <path
+                                d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                                stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </div> -->
+        <!-- search input -->
+        <!-- <input type="text" placeholder="search..." class=""> -->
+        <!-- filter icon -->
+        <!-- <div class="navbarFilter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 7H6" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M3 17H9" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M18 17H21" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M15 7H21" stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M12 4H6V10H12V4Z" stroke="white" stroke-width="1.5" />
+                        <path d="M18 14H12V20H18V14Z" stroke="white" stroke-width="1.5" />
+                    </svg>
+                </div> 
+            </div>-->
+        <div class="navbarThree__subMenu flex-column">
+            <div class="navBarThree__links ">
+                <ul class="d-flex flex-column gap-1 align-items-start justify-content-between secondNavList">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">Halls</a></li>
+                    <li><a href="">My Events</a></li>
+                    <li><a href="">Invites</a></li>
+                    <li><a href="">Cards</a></li>
+                    <li><a href="">Events Services</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact US</a></li>
+                    <li>
+                        <div class="userLanguage d-flex align-items-center justify-content-between">
+                            <img src="assets/images/general/language.jpg" alt="">
+                            <!-- dropDown Languages -->
+                            <div class="userLanguage__selection d-flex align-items-center">
+                                <p class="userLanguage__selection__language">English</p>
+                                <div class="userLanguage__selection__arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbarClose position-absolute">
+                <i class="fa-solid fa-xmark text-light fs-3"></i>
+            </div>
+        </div>
+        <div class="user_mobile d-flex align-items-center justify-content-end">
+            <div class="userSystem d-flex align-items-center justify-content-between">
+                <!-- user notification -->
+                <div class="userNotification">
+                    <a href="/assets/pages/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="32"
+                            viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M23.6715 15.3606H24.6137V15.3359L24.6125 15.3111L23.6715 15.3606ZM23.6715 18.5128H22.7292V18.8633L22.9582 19.1285L23.6715 18.5128ZM26.3832 24.7945V25.7368H27.3254V24.7945H26.3832ZM26.3832 21.6537H27.3254C27.3254 21.4275 27.2441 21.2091 27.0964 21.0379L26.3832 21.6537ZM6.48058 15.3606L5.53961 15.3111L5.53832 15.3359V15.3606H6.48058ZM6.48058 18.5128L7.19381 19.1285L7.42284 18.8633V18.5128H6.48058ZM3.76892 24.7945H2.82666V25.7368H3.76892V24.7945ZM3.76892 21.6537L3.05569 21.0379C2.90795 21.2091 2.82666 21.4275 2.82666 21.6537H3.76892ZM15.076 8.14795C19.1528 8.14795 22.5162 11.3391 22.7306 15.4101L24.6125 15.3111C24.3455 10.2391 20.1551 6.26343 15.076 6.26343V8.14795ZM22.7292 15.3606V18.5128H24.6137V15.3606H22.7292ZM22.9582 19.1285L25.6699 22.2694L27.0964 21.0379L24.3847 17.8971L22.9582 19.1285ZM25.4409 21.6537V24.7945H27.3254V21.6537H25.4409ZM15.076 6.26343C9.99698 6.26343 5.80658 10.2391 5.53961 15.3111L7.42153 15.4101C7.6358 11.3391 10.9993 8.14795 15.076 8.14795V6.26343ZM5.53832 15.3606V18.5128H7.42284V15.3606H5.53832ZM3.76892 25.7368H26.3832V23.8523H3.76892V25.7368ZM5.76735 17.8971L3.05569 21.0379L4.48215 22.2694L7.19381 19.1285L5.76735 17.8971ZM2.82666 21.6537V24.7945H4.71118V21.6537H2.82666Z"
+                                fill="white" />
+                            <path
+                                d="M13.1917 5.32104C13.1917 6.36184 14.0354 7.20556 15.0762 7.20556C16.1169 7.20556 16.9607 6.36184 16.9607 5.32104C16.9607 4.28025 16.1169 3.43652 15.0762 3.43652C14.0354 3.43652 13.1917 4.28025 13.1917 5.32104Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M18.8452 24.7944C18.8452 26.8761 17.1578 28.5635 15.0762 28.5635C12.9945 28.5635 11.3071 26.8761 11.3071 24.7944"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M16.4544 10.1392C17.0465 13.1818 19.9931 15.1682 23.0355 14.5761C26.078 13.9841 28.0646 11.0376 27.4725 7.99505C26.8804 4.95248 23.9338 2.96603 20.8914 3.5581C17.8489 4.15016 15.8623 7.09662 16.4544 10.1392Z"
+                                fill="#D61C2A" stroke="#003A61" stroke-width="1.62058" stroke-linejoin="round" />
+                        </svg></a>
+                </div>
+                <div class="line"></div>
+                <div class="userWishlist">
+                    <a href="/assets/pages/profile.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M23.8432 5.62846C18.8282 2.9388 15.2274 6.90366 15.2274 6.90366C15.2274 6.90366 11.6263 2.93879 6.61139 5.62845C0.537316 8.88615 0.101149 21.6435 15.2274 27.3071C30.3535 21.6435 29.9172 8.88617 23.8432 5.62846Z"
+                                stroke="white" stroke-width="1.88452" stroke-linecap="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="line"></div>
+                <div class="userLogin position-relative">
+                    <a href="assets/pages/signup/logIn.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                            <path
+                                d="M15.3808 28.5635C22.3195 28.5635 27.9443 22.9386 27.9443 16C27.9443 9.06138 22.3195 3.43652 15.3808 3.43652C8.44224 3.43652 2.81738 9.06138 2.81738 16C2.81738 22.9386 8.44224 28.5635 15.3808 28.5635Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                            <path
+                                d="M9.72729 22.2817C12.6567 19.2135 18.0735 19.069 21.0344 22.2817M18.5156 12.8591C18.5156 14.5938 17.1073 16 15.3702 16C13.6332 16 12.2249 14.5938 12.2249 12.8591C12.2249 11.1245 13.6332 9.71826 15.3702 9.71826C17.1073 9.71826 18.5156 11.1245 18.5156 12.8591Z"
+                                stroke="white" stroke-width="1.88452" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end navbar three -->
+
+    <!-- empty favourite List -->
+    <div class="emptyFavouriteList">
+        <div class="emptyFavouriteList__upper d-flex justify-content-between align-items-center">
+            <p class="m-0">
+                My Favourite List
+            </p>
+            <div class="close__emptyFavouriteList">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                    <path
+                        d="M28 15.5C28 8.59644 22.4035 3 15.5 3C8.59644 3 3 8.59644 3 15.5C3 22.4035 8.59644 28 15.5 28C22.4035 28 28 22.4035 28 15.5Z"
+                        fill="#E1E3E3" stroke="#E1E3E3" stroke-width="1.875" />
+                    <path d="M19.5 11.5L15.5 15.5M15.5 15.5L11.5 19.5M15.5 15.5L19.5 19.5M15.5 15.5L11.5 11.5"
+                        stroke="#2E2E2E" stroke-width="1.71429" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="emptyFavouriteList__down d-flex flex-column align-items-center justify-content-center">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                    <path
+                        d="M16.4987 28.5C0.445578 22.4893 0.908472 8.95024 7.35476 5.49291C12.677 2.63843 16.4987 6.84627 16.4987 6.84627C16.4987 6.84627 20.3202 2.63844 25.6424 5.49292C28.6594 7.111 30.3658 10.9373 29.6819 15.1667"
+                        stroke="#B0B1B1" stroke-width="2" />
+                    <path d="M19.1667 23.1666H29.8334M24.5001 17.8333V28.4999" stroke="#B0B1B1" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="emptyFavouriteList__down__text align-self-center">
+                <p class="text-center">Your favorites list is empty</p>
+                <p>Explore and Fill your favorites with halls you love!</p>
+            </div>
+            <div class="emptyFavouriteList__down__button">
+                <p class="m-0">Discover Me</p>
+            </div>
+        </div>
+    </div>
+    <!--favourite List -->
+    <div class="favouriteList d-flex flex-column align-items-center justify-content-start">
+        <div class="emptyFavouriteList__upper d-flex justify-content-between align-items-center w-100">
+            <p class="m-0">
+                My Favourite List
+            </p>
+            <div class="close__favouriteList">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                    <path
+                        d="M28 15.5C28 8.59644 22.4035 3 15.5 3C8.59644 3 3 8.59644 3 15.5C3 22.4035 8.59644 28 15.5 28C22.4035 28 28 22.4035 28 15.5Z"
+                        fill="#E1E3E3" stroke="#E1E3E3" stroke-width="1.875" />
+                    <path d="M19.5 11.5L15.5 15.5M15.5 15.5L11.5 19.5M15.5 15.5L19.5 19.5M15.5 15.5L11.5 11.5"
+                        stroke="#2E2E2E" stroke-width="1.71429" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="favouriteList__container d-flex flex-column">
+            <div class="favouriteList__container__card">
+                <img src="assets/images/home/discover hall.png" alt="">
+                <div
+                    class="favouriteList__container__card__down d-flex flex-column align-items-start justify-content-between w-100">
+                    <div class="w-100 favouriteList__container__card__down__text">
+                        <p class="mb-0">Sparkling Star Hall</p>
+                        <p class="m">208 Olson Boulevard, Toyburgh</p>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <div class="favouriteList__container__card__down__capacity d-flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <path
+                                        d="M17 11.3103C18.3807 11.3103 19.5 10.191 19.5 8.8103C19.5 7.42959 18.3807 6.3103 17 6.3103M22 18.8103C22 16.0489 19.7614 13.8103 17 13.8103"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M6.99998 11.3103C5.61927 11.3103 4.49998 10.191 4.49998 8.8103C4.49998 7.42959 5.61927 6.3103 6.99998 6.3103M2 18.8103C2 16.0489 4.23858 13.8103 7 13.8103"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M15.5 8.3103C15.5 10.2433 13.933 11.8103 12 11.8103C10.067 11.8103 8.5 10.2433 8.5 8.3103C8.5 6.3773 10.067 4.8103 12 4.8103C13.933 4.8103 15.5 6.3773 15.5 8.3103Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M5 20.8098H19C19 17.4961 15.866 14.8098 12 14.8098C8.13401 14.8098 5 17.4961 5 20.8098Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                </svg>
+                                <div>
+                                    <p class="m-0 favouriteList__rating">Capacity</p>
+                                    <p class="m-0">1200 Person</p>
+                                </div>
+                            </div>
+                            <div class="favouriteList__container__card__down__rating d-flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path
+                                        d="M12.5004 3.87973L13.0789 3.54226C12.9589 3.33648 12.7387 3.20996 12.5004 3.20996C12.2622 3.20996 12.0419 3.33648 11.9219 3.54226L12.5004 3.87973ZM15.626 9.23788L15.0475 9.57535L15.1893 9.81848L15.4622 9.88731L15.626 9.23788ZM21.4307 10.7018L21.9222 11.1568C22.0828 10.9833 22.14 10.738 22.0728 10.5113C22.0055 10.2846 21.8237 10.1102 21.5944 10.0524L21.4307 10.7018ZM17.4121 15.0425L16.9205 14.5875L16.6816 14.8457L16.7585 15.189L17.4121 15.0425ZM18.9126 21.7402L18.6544 22.3582C18.8855 22.4547 19.151 22.4144 19.343 22.2534C19.5349 22.0926 19.621 21.8381 19.5662 21.5938L18.9126 21.7402ZM12.5004 19.0611L12.7586 18.4432L12.5004 18.3353L12.2422 18.4432L12.5004 19.0611ZM6.0882 21.7402L5.43463 21.5938C5.37989 21.8381 5.46601 22.0926 5.65789 22.2534C5.84977 22.4144 6.11536 22.4547 6.3464 22.3582L6.0882 21.7402ZM7.58878 15.0425L8.24235 15.189L8.31926 14.8457L8.08027 14.5875L7.58878 15.0425ZM3.57017 10.7018L3.40638 10.0524C3.17712 10.1102 2.99532 10.2846 2.92807 10.5113C2.86082 10.738 2.91806 10.9833 3.07869 11.1568L3.57017 10.7018ZM9.37483 9.23788L9.53862 9.88731L9.81154 9.81848L9.95336 9.57535L9.37483 9.23788ZM11.9219 4.2172L15.0475 9.57535L16.2045 8.9004L13.0789 3.54226L11.9219 4.2172ZM15.4622 9.88731L21.2669 11.3512L21.5944 10.0524L15.7898 8.58844L15.4622 9.88731ZM20.9391 10.2468L16.9205 14.5875L17.9036 15.4975L21.9222 11.1568L20.9391 10.2468ZM16.7585 15.189L18.2591 21.8867L19.5662 21.5938L18.0657 14.8961L16.7585 15.189ZM19.1709 21.1222L12.7586 18.4432L12.2422 19.6791L18.6544 22.3582L19.1709 21.1222ZM12.2422 18.4432L5.83 21.1222L6.3464 22.3582L12.7586 19.6791L12.2422 18.4432ZM6.74177 21.8867L8.24235 15.189L6.93521 14.8961L5.43463 21.5938L6.74177 21.8867ZM8.08027 14.5875L4.06166 10.2468L3.07869 11.1568L7.0973 15.4975L8.08027 14.5875ZM3.73396 11.3512L9.53862 9.88731L9.21104 8.58844L3.40638 10.0524L3.73396 11.3512ZM9.95336 9.57535L13.0789 4.2172L11.9219 3.54226L8.79631 8.9004L9.95336 9.57535Z"
+                                        fill="#424242" />
+                                </svg>
+                                <div>
+                                    <p class="m-0 favouriteList__rating">Ratings</p>
+                                    <p class="m-0">4.3 (32 Reviews)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="favoriteList__cost">
+                            <p class="m-0">Cost Starts from</p>
+                            <p class="m-0">500 QAR</p>
+                        </div>
+                        <div class="favouriteList__bookButton">
+                            <p class="m-0">Book</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="favouriteList__container__card">
+                <img src="assets/images/home/discover hall.png" alt="">
+                <div
+                    class="favouriteList__container__card__down d-flex flex-column align-items-start justify-content-between w-100">
+                    <div class="w-100 favouriteList__container__card__down__text">
+                        <p class="mb-0">Sparkling Star Hall</p>
+                        <p class="m">208 Olson Boulevard, Toyburgh</p>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <div class="favouriteList__container__card__down__capacity d-flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <path
+                                        d="M17 11.3103C18.3807 11.3103 19.5 10.191 19.5 8.8103C19.5 7.42959 18.3807 6.3103 17 6.3103M22 18.8103C22 16.0489 19.7614 13.8103 17 13.8103"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M6.99998 11.3103C5.61927 11.3103 4.49998 10.191 4.49998 8.8103C4.49998 7.42959 5.61927 6.3103 6.99998 6.3103M2 18.8103C2 16.0489 4.23858 13.8103 7 13.8103"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M15.5 8.3103C15.5 10.2433 13.933 11.8103 12 11.8103C10.067 11.8103 8.5 10.2433 8.5 8.3103C8.5 6.3773 10.067 4.8103 12 4.8103C13.933 4.8103 15.5 6.3773 15.5 8.3103Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M5 20.8098H19C19 17.4961 15.866 14.8098 12 14.8098C8.13401 14.8098 5 17.4961 5 20.8098Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                </svg>
+                                <div>
+                                    <p class="m-0 favouriteList__rating">Capacity</p>
+                                    <p class="m-0">1200 Person</p>
+                                </div>
+                            </div>
+                            <div class="favouriteList__container__card__down__rating d-flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path
+                                        d="M12.5004 3.87973L13.0789 3.54226C12.9589 3.33648 12.7387 3.20996 12.5004 3.20996C12.2622 3.20996 12.0419 3.33648 11.9219 3.54226L12.5004 3.87973ZM15.626 9.23788L15.0475 9.57535L15.1893 9.81848L15.4622 9.88731L15.626 9.23788ZM21.4307 10.7018L21.9222 11.1568C22.0828 10.9833 22.14 10.738 22.0728 10.5113C22.0055 10.2846 21.8237 10.1102 21.5944 10.0524L21.4307 10.7018ZM17.4121 15.0425L16.9205 14.5875L16.6816 14.8457L16.7585 15.189L17.4121 15.0425ZM18.9126 21.7402L18.6544 22.3582C18.8855 22.4547 19.151 22.4144 19.343 22.2534C19.5349 22.0926 19.621 21.8381 19.5662 21.5938L18.9126 21.7402ZM12.5004 19.0611L12.7586 18.4432L12.5004 18.3353L12.2422 18.4432L12.5004 19.0611ZM6.0882 21.7402L5.43463 21.5938C5.37989 21.8381 5.46601 22.0926 5.65789 22.2534C5.84977 22.4144 6.11536 22.4547 6.3464 22.3582L6.0882 21.7402ZM7.58878 15.0425L8.24235 15.189L8.31926 14.8457L8.08027 14.5875L7.58878 15.0425ZM3.57017 10.7018L3.40638 10.0524C3.17712 10.1102 2.99532 10.2846 2.92807 10.5113C2.86082 10.738 2.91806 10.9833 3.07869 11.1568L3.57017 10.7018ZM9.37483 9.23788L9.53862 9.88731L9.81154 9.81848L9.95336 9.57535L9.37483 9.23788ZM11.9219 4.2172L15.0475 9.57535L16.2045 8.9004L13.0789 3.54226L11.9219 4.2172ZM15.4622 9.88731L21.2669 11.3512L21.5944 10.0524L15.7898 8.58844L15.4622 9.88731ZM20.9391 10.2468L16.9205 14.5875L17.9036 15.4975L21.9222 11.1568L20.9391 10.2468ZM16.7585 15.189L18.2591 21.8867L19.5662 21.5938L18.0657 14.8961L16.7585 15.189ZM19.1709 21.1222L12.7586 18.4432L12.2422 19.6791L18.6544 22.3582L19.1709 21.1222ZM12.2422 18.4432L5.83 21.1222L6.3464 22.3582L12.7586 19.6791L12.2422 18.4432ZM6.74177 21.8867L8.24235 15.189L6.93521 14.8961L5.43463 21.5938L6.74177 21.8867ZM8.08027 14.5875L4.06166 10.2468L3.07869 11.1568L7.0973 15.4975L8.08027 14.5875ZM3.73396 11.3512L9.53862 9.88731L9.21104 8.58844L3.40638 10.0524L3.73396 11.3512ZM9.95336 9.57535L13.0789 4.2172L11.9219 3.54226L8.79631 8.9004L9.95336 9.57535Z"
+                                        fill="#424242" />
+                                </svg>
+                                <div>
+                                    <p class="m-0 favouriteList__rating">Ratings</p>
+                                    <p class="m-0">4.3 (32 Reviews)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="favoriteList__cost">
+                            <p class="m-0">Cost Starts from</p>
+                            <p class="m-0">500 QAR</p>
+                        </div>
+                        <div class="favouriteList__bookButton">
+                            <p class="m-0">Book</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="favouriteList__container__card">
+                <img src="assets/images/home/discover hall.png" alt="">
+                <div
+                    class="favouriteList__container__card__down d-flex flex-column align-items-start justify-content-between w-100">
+                    <div class="w-100 favouriteList__container__card__down__text">
+                        <p class="mb-0">Sparkling Star Hall</p>
+                        <p class="m">208 Olson Boulevard, Toyburgh</p>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <div class="favouriteList__container__card__down__capacity d-flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <path
+                                        d="M17 11.3103C18.3807 11.3103 19.5 10.191 19.5 8.8103C19.5 7.42959 18.3807 6.3103 17 6.3103M22 18.8103C22 16.0489 19.7614 13.8103 17 13.8103"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M6.99998 11.3103C5.61927 11.3103 4.49998 10.191 4.49998 8.8103C4.49998 7.42959 5.61927 6.3103 6.99998 6.3103M2 18.8103C2 16.0489 4.23858 13.8103 7 13.8103"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M15.5 8.3103C15.5 10.2433 13.933 11.8103 12 11.8103C10.067 11.8103 8.5 10.2433 8.5 8.3103C8.5 6.3773 10.067 4.8103 12 4.8103C13.933 4.8103 15.5 6.3773 15.5 8.3103Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                    <path
+                                        d="M5 20.8098H19C19 17.4961 15.866 14.8098 12 14.8098C8.13401 14.8098 5 17.4961 5 20.8098Z"
+                                        stroke="#424242" stroke-width="1.5" />
+                                </svg>
+                                <div>
+                                    <p class="m-0 favouriteList__rating">Capacity</p>
+                                    <p class="m-0">1200 Person</p>
+                                </div>
+                            </div>
+                            <div class="favouriteList__container__card__down__rating d-flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path
+                                        d="M12.5004 3.87973L13.0789 3.54226C12.9589 3.33648 12.7387 3.20996 12.5004 3.20996C12.2622 3.20996 12.0419 3.33648 11.9219 3.54226L12.5004 3.87973ZM15.626 9.23788L15.0475 9.57535L15.1893 9.81848L15.4622 9.88731L15.626 9.23788ZM21.4307 10.7018L21.9222 11.1568C22.0828 10.9833 22.14 10.738 22.0728 10.5113C22.0055 10.2846 21.8237 10.1102 21.5944 10.0524L21.4307 10.7018ZM17.4121 15.0425L16.9205 14.5875L16.6816 14.8457L16.7585 15.189L17.4121 15.0425ZM18.9126 21.7402L18.6544 22.3582C18.8855 22.4547 19.151 22.4144 19.343 22.2534C19.5349 22.0926 19.621 21.8381 19.5662 21.5938L18.9126 21.7402ZM12.5004 19.0611L12.7586 18.4432L12.5004 18.3353L12.2422 18.4432L12.5004 19.0611ZM6.0882 21.7402L5.43463 21.5938C5.37989 21.8381 5.46601 22.0926 5.65789 22.2534C5.84977 22.4144 6.11536 22.4547 6.3464 22.3582L6.0882 21.7402ZM7.58878 15.0425L8.24235 15.189L8.31926 14.8457L8.08027 14.5875L7.58878 15.0425ZM3.57017 10.7018L3.40638 10.0524C3.17712 10.1102 2.99532 10.2846 2.92807 10.5113C2.86082 10.738 2.91806 10.9833 3.07869 11.1568L3.57017 10.7018ZM9.37483 9.23788L9.53862 9.88731L9.81154 9.81848L9.95336 9.57535L9.37483 9.23788ZM11.9219 4.2172L15.0475 9.57535L16.2045 8.9004L13.0789 3.54226L11.9219 4.2172ZM15.4622 9.88731L21.2669 11.3512L21.5944 10.0524L15.7898 8.58844L15.4622 9.88731ZM20.9391 10.2468L16.9205 14.5875L17.9036 15.4975L21.9222 11.1568L20.9391 10.2468ZM16.7585 15.189L18.2591 21.8867L19.5662 21.5938L18.0657 14.8961L16.7585 15.189ZM19.1709 21.1222L12.7586 18.4432L12.2422 19.6791L18.6544 22.3582L19.1709 21.1222ZM12.2422 18.4432L5.83 21.1222L6.3464 22.3582L12.7586 19.6791L12.2422 18.4432ZM6.74177 21.8867L8.24235 15.189L6.93521 14.8961L5.43463 21.5938L6.74177 21.8867ZM8.08027 14.5875L4.06166 10.2468L3.07869 11.1568L7.0973 15.4975L8.08027 14.5875ZM3.73396 11.3512L9.53862 9.88731L9.21104 8.58844L3.40638 10.0524L3.73396 11.3512ZM9.95336 9.57535L13.0789 4.2172L11.9219 3.54226L8.79631 8.9004L9.95336 9.57535Z"
+                                        fill="#424242" />
+                                </svg>
+                                <div>
+                                    <p class="m-0 favouriteList__rating">Ratings</p>
+                                    <p class="m-0">4.3 (32 Reviews)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="favoriteList__cost">
+                            <p class="m-0">Cost Starts from</p>
+                            <p class="m-0">500 QAR</p>
+                        </div>
+                        <div class="favouriteList__bookButton">
+                            <p class="m-0">Book</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- notification submenu -->
+    <div class="notification__subMenu d-flex flex-column justify-content-start">
+        <div class="d-flex flex-column notification__subMenu__upper">
+            <div class="emptyFavouriteList__upper d-flex justify-content-between align-items-center w-100">
+                <p class="m-0">
+                    Notifications
+                </p>
+                <div class="close__notification__subMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                        <path
+                            d="M28 15.5C28 8.59644 22.4035 3 15.5 3C8.59644 3 3 8.59644 3 15.5C3 22.4035 8.59644 28 15.5 28C22.4035 28 28 22.4035 28 15.5Z"
+                            fill="#E1E3E3" stroke="#E1E3E3" stroke-width="1.875" />
+                        <path d="M19.5 11.5L15.5 15.5M15.5 15.5L11.5 19.5M15.5 15.5L19.5 19.5M15.5 15.5L11.5 11.5"
+                            stroke="#2E2E2E" stroke-width="1.71429" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="notification__subMenu__buttons d-flex align-items-center">
+                <div class="notificationButton">
+                    <p class="m-0">Notifications</p>
+                </div>
+                <div class="invitationButton">
+                    <p class="m-0">invitations</p>
+                </div>
+            </div>
+        </div>
+        <!-- on notification button -->
+        <div class="notifiaction__subMenu__notifications">
+            <p class="m-0 notificationDay">TODAY</p>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <p class="m-0 notificationDay">YESTERDAY</p>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+        </div>
+        <!-- on invitation button -->
+        <div class="notifiaction__subMenu__invitaions">
+            <p class="m-0 notificationDay">YESTERDAY</p>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+            <div class="notificationCard d-flex">
+                <div class="notificationCard__image">
+                    <img src="assets/images/home/notificationImage.png" class="w-100" alt="">
+                </div>
+                <div class="notificationCard__details">
+                    <p class="m-0">Sarah just posted something new. Take a look!</p>
+                    <p class="m-0">Today 09:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader -->
+    <div id="preloader"></div>
+    <!-- vendor js file -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- main js file -->
+    <script src="/assets/js/general.js"></script>
+    <script src="/assets/js/hallBooking.js"></script>
+</body>
+
+</html>

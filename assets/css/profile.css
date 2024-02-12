@@ -144,7 +144,8 @@ body {
     gap: 10px;
 }
 
-.profile__general__box input {
+.profile__general__box input,
+.profile__general__box select {
     /* Paragraph/01/Regular */
     font-family: "Inter";
     font-size: 14px;
@@ -155,6 +156,13 @@ body {
     border: none;
     outline: none;
     /* 21px */
+}
+
+.profile__general__box select:focus {
+    border-color: rgba(100, 100, 100, 1) !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 input::-webkit-outer-spin-button,
@@ -647,6 +655,21 @@ input[type='date'] {
     width: calc((100% / 2) - 10px);
 }
 
+.favourite__card__icon {
+    position: absolute;
+    right: 10.5px;
+    top: 12px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 38px;
+    background: rgba(9, 10, 10, 0.50);
+}
+
 @media (max-width:1200px) {
     .favourite__card {
         width: 100% !important;
@@ -681,7 +704,7 @@ input[type='date'] {
 }
 
 .page-active {
-    background: #003A61 !important; 
+    background: #003A61 !important;
     color: white;
 }
 
@@ -715,6 +738,7 @@ input[type='date'] {
         gap: 10px !important;
         flex-wrap: nowrap !important;
     }
+
     .profile__rightSide {
         margin-top: 60px;
     }
@@ -753,4 +777,3 @@ input[type='date'] {
         width: 90%
     }
 }
-

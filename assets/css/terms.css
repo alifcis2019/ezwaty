@@ -1,0 +1,151 @@
+.terms {
+    margin: 0px 45px 45px 45px;
+}
+
+.terms__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.terms__container {
+    width: 55%;
+}
+
+.terms__image {
+    width: 40%;
+}
+
+.terms__image img {
+    width: 100%
+}
+
+.terms__container__upper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.terms__container__upper__header span:nth-child(1) {
+    color: var(--Neutral-450, #818383);
+
+    /* Caption/CAP */
+    font-family: "Inter";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 18px */
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+
+
+.terms__container__upper__header span:nth-child(2) {
+    align-self: stretch;
+    color: #1A1A1A;
+
+    /* Heading/H6/Bold */
+    font-family: "Inter";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 28.5px */
+    letter-spacing: -0.38px;
+}
+
+.terms__container__upper__text {
+    align-self: stretch;
+    color: #808080;
+
+    /* Paragraph/01/Regular */
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
+
+.terms__booking {
+    display: flex;
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Neutral-100, #E1E3E3);
+    background: var(--Primary-05, #FFF);
+}
+
+.terms__booking_header {
+    align-self: stretch;
+    color: var(--Neutral-550, #6B6C6C);
+
+    /* Caption/CAP */
+    font-family: "Inter";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 18px */
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+
+.terms__reservation span:nth-child(1) {
+    align-self: stretch;
+    color: var(--Neutral-800, #2E2E2E);
+
+    /* Heading/H6-Small/SemiBold */
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: -0.32px;
+}
+
+.terms__reservation span:nth-child(2) {
+    align-self: stretch;
+    color: var(--Grey-10, #3D3D3D);
+
+    /* Paragraph/01/Regular */
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
+
+.terms__conduct {
+    display: flex;
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    background: var(--Primary-05, #FFF);
+    border-bottom: 1px solid var(--Neutral-100, #E1E3E3);
+}
+
+.terms__conduct__header {
+    align-self: stretch;
+    color: var(--Neutral-550, #6B6C6C);
+
+    /* Caption/CAP */
+    font-family: "Inter";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 18px */
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}

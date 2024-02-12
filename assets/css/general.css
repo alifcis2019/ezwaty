@@ -102,7 +102,7 @@
 }
 
 .navbar-brand {
-    color: var(--Neutral-00, #FFF);
+    color: var(--Neutral-00, #FFF) !important;
     font-family: Playfair Display;
     font-size: 32px;
     font-style: normal;
